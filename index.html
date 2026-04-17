@@ -1,0 +1,1555 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome (for icons) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <title>Premium Header</title>
+  </head>
+
+  <body class="bg-white">
+    <header id="header" class="bg-white shadow-sm sticky top-0 z-50">
+      <!-- TOP HEADER -->
+      <div
+        id="topHeader"
+        class="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 py-2 md:py-3 flex items-center justify-between"
+      >
+        <!-- LEFT -->
+        <div class="flex items-center gap-3">
+          <!-- HAMBURGER (mobile only) -->
+          <button id="menuBtn" class="md:hidden text-xl">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+
+          <!-- LOGO -->
+          <img
+            src="https://imgcdn.floweraura.com/fa-logo/final-23-desk.svg"
+            class="h-10 sm:h-12 md:h-14 cursor-pointer hover:scale-105 transition"
+          />
+        </div>
+
+        <!-- SEARCH + DELIVERY (desktop only SAME UI) -->
+        <div class="max-w-xl hidden md:flex items-center gap-4 flex-1 mx-4">
+          <div
+            class="flex items-center justify-between w-64 bg-gradient-to-r from-sky-200 to-sky-50 px-4 py-3 rounded-lg cursor-pointer hover:bg-gray-50 transition"
+          >
+            <div class="flex items-center gap-2">
+              <img
+                src="https://imgcdn.floweraura.com/ssr-build/static/media/india.469977db.png"
+                class="h-5 w-7 object-contain"
+              />
+              <span class="text-sm font-medium text-gray-600">
+                Deliver to ?
+              </span>
+            </div>
+
+            <i
+              class="fa-solid fa-pen text-gray-600 hover:text-pink-600 text-sm"
+            ></i>
+          </div>
+
+          <div class="flex-1 relative">
+            <input
+              type="text"
+              placeholder="Search flowers, cakes, gifts..."
+              class="w-full border rounded py-3 pl-5 pr-12 focus:outline-none focus:ring-2 focus:ring-pink-400 bg-gray-50"
+            />
+            <i
+              class="fa-solid fa-magnifying-glass absolute right-4 top-4 text-gray-500"
+            ></i>
+          </div>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="flex items-center gap-4 md:gap-6">
+          <!-- INR -->
+          <a
+            href="#"
+            class="flex flex-col items-center text-xs hover:text-pink-500"
+          >
+            <i
+              class="fa-solid fa-indian-rupee-sign text-lg md:text-2xl text-gray-600"
+            ></i>
+            <span class="hidden md:block text-sm text-gray-700">Inr</span>
+          </a>
+
+          <!-- CART -->
+          <a
+            href="#"
+            class="relative flex flex-col items-center text-xs hover:text-pink-500"
+          >
+            <i
+              class="fa-solid fa-cart-shopping text-lg md:text-2xl text-gray-600"
+            ></i>
+            <span class="hidden md:block text-sm text-gray-700">Cart</span>
+            <span
+              class="absolute top-0 left-4 bg-orange-600 text-white text-[10px] px-1 rounded-full"
+            >
+              0
+            </span>
+          </a>
+
+          <!-- SEARCH (mobile only) -->
+          <i class="fa-solid fa-magnifying-glass text-lg md:hidden"></i>
+
+          <!-- MORE (3 dots mobile) -->
+          <i class="fa-solid fa-ellipsis-vertical text-lg md:hidden"></i>
+
+          <!-- DESKTOP EXTRA (UNCHANGED) -->
+          <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+            <!-- Track -->
+            <a
+              href="#"
+              class="flex flex-col items-center text-xs hover:text-pink-500 transition"
+            >
+              <i class="fa-solid fa-truck text-2xl text-gray-600"></i>
+              <span class="text-sm text-gray-700">Track order</span>
+            </a>
+
+            <!-- Sign In -->
+            <a
+              href="#"
+              class="flex flex-col items-center text-xs hover:text-pink-500 transition"
+            >
+              <i class="fa-solid fa-user text-2xl text-gray-600"></i>
+              <span class="text-sm text-gray-700">Sign In</span>
+            </a>
+
+            <!-- MORE (DESKTOP ONLY) -->
+            <div
+              class="relative group hidden md:flex flex-col items-center text-xs cursor-pointer hover:text-pink-500"
+            >
+              <i class="fa-solid fa-bars text-2xl text-gray-600"></i>
+              <span class="text-sm text-gray-700">More</span>
+
+              <!-- DROPDOWN -->
+              <div
+                class="absolute right-0 mt-10 w-52 bg-white shadow-xl rounded-xl opacity-0 invisible group-hover:visible group-hover:opacity-100 transition duration-200 z-50"
+              >
+                <ul class="py-2 text-sm">
+                  <li class="px-4 py-2 hover:bg-gray-100">Corporate Gifts</li>
+                  <li class="px-4 py-2 hover:bg-gray-100">My Favourites</li>
+                  <li class="px-4 py-2 hover:bg-gray-100">Gift Finder</li>
+                  <li class="px-4 py-2 hover:bg-gray-100">Refer & Earn</li>
+                  <li class="px-4 py-2 hover:bg-gray-100">Franchise</li>
+                  <li class="px-4 py-2 hover:bg-gray-100">FAQ</li>
+                  <li class="px-4 py-2 hover:bg-gray-100">About Us</li>
+                  <li class="px-4 py-2 hover:bg-gray-100">Contact Us</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ✅ MOBILE DELIVER (ALWAYS VISIBLE) -->
+      <div class="md:hidden px-4 py-3 border-b bg-white">
+        <div
+          class="flex justify-between items-center bg-sky-100 px-4 py-3 rounded-lg"
+        >
+          <span class="text-sm">Deliver to ?</span>
+          <i class="fa-solid fa-pen"></i>
+        </div>
+      </div>
+
+      <!-- ✅ MOBILE MENU (ONLY NAV) -->
+      <div id="mobileMenu" class="hidden md:hidden bg-white shadow-md">
+        <ul class="flex flex-col text-sm">
+          <li class="p-4 border-b">Flowers</li>
+          <li class="p-4 border-b">Cakes</li>
+          <li class="p-4 border-b">Combos</li>
+          <li class="p-4 border-b">Birthday</li>
+          <li class="p-4 border-b">Anniversary</li>
+          <li class="p-4 border-b">Gifts</li>
+          <li class="p-4 border-b">Personalised</li>
+          <li class="p-4 border-b">Plants</li>
+          <li class="p-4 border-b">Chocolates</li>
+          <li class="p-4 border-b">Occasion</li>
+        </ul>
+      </div>
+
+      <!-- DESKTOP NAVBAR (UNCHANGED) -->
+      <nav
+        class="hidden md:block bg-white border-t border-gray-300 border-b border-gray-300"
+      >
+        <div class="max-w-7xl mx-auto px-6 text-center">
+          <ul class="flex space-x-8 py-4 font-medium justify-center">
+            <li><a href="#" class="hover:text-pink-600">Flowers</a></li>
+            <li><a href="#" class="hover:text-pink-600">Cakes</a></li>
+            <li><a href="#" class="hover:text-pink-600">Combos</a></li>
+            <li><a href="#" class="hover:text-pink-600">Birthday</a></li>
+            <li><a href="#" class="hover:text-pink-600">Anniversary</a></li>
+            <li><a href="#" class="hover:text-pink-600">Gifts</a></li>
+            <li><a href="#" class="hover:text-pink-600">Personalised</a></li>
+            <li><a href="#" class="hover:text-pink-600">Plants</a></li>
+            <li><a href="#" class="hover:text-pink-600">Chocolates</a></li>
+            <li><a href="#" class="hover:text-pink-600">Occasion</a></li>
+            <li><a href="#" class="hover:text-pink-600">International</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- BANNER SECTION -->
+    <section class="flex flex-col">
+      <!-- 🎯 CATEGORY SECTION (mobile pe pehle aayega) -->
+      <section class="bg-white py-6 md:py-10 order-1 md:order-2">
+        <div class="max-w-7xl mx-auto px-4 pt-4 md:pt-8">
+          <h2 class="text-center text-xl font-bold mb-4 md:hidden">
+            Shop Our Best Categories
+          </h2>
+          <div class="grid grid-cols-4 md:grid-cols-8 gap-4 md:gap-6">
+            <a href="#" class="text-center group">
+              <img
+                src="https://imgcdn.floweraura.com/Flowers-card.jpg?tr=w-164"
+                class="w-full h-30 md:h-30 object-cover rounded-xl md:rounded-2xl shadow group-hover:scale-105 transition"
+              />
+              <p class="mt-2 md:mt-4 text-xs md:text-sm font-bold">Flowers</p>
+            </a>
+
+            <a href="#" class="text-center group">
+              <img
+                src="https://imgcdn.floweraura.com/cake-homepage_0.jpg?tr=w-164"
+                class="w-full h-30 md:h-30 object-cover rounded-xl md:rounded-2xl shadow group-hover:scale-105 transition"
+              />
+              <p class="mt-2 md:mt-4 text-xs md:text-sm font-bold">Cakes</p>
+            </a>
+
+            <a href="#" class="text-center group">
+              <img
+                src="https://imgcdn.floweraura.com/combo-1.jpg?tr=w-164"
+                class="w-full h-30 md:h-30 object-cover rounded-xl md:rounded-2xl shadow group-hover:scale-105 transition"
+              />
+              <p class="mt-2 md:mt-4 text-xs md:text-sm font-bold">Combos</p>
+            </a>
+
+            <a href="#" class="text-center group">
+              <img
+                src="https://imgcdn.floweraura.com/Card-3.jpg?tr=w-164"
+                class="w-full h-30 md:h-30 object-cover rounded-xl md:rounded-2xl shadow group-hover:scale-105 transition"
+              />
+              <p class="mt-2 md:mt-4 text-xs md:text-sm font-bold">Balloon</p>
+            </a>
+
+            <a href="#" class="text-center group">
+              <img
+                src="https://imgcdn.floweraura.com/plant-card-image_0.jpg?tr=w-164"
+                class="w-full h-30 md:h-30 object-cover rounded-xl md:rounded-2xl shadow group-hover:scale-105 transition"
+              />
+              <p class="mt-2 md:mt-4 text-xs md:text-sm font-bold">Plants</p>
+            </a>
+
+            <a href="#" class="text-center group">
+              <img
+                src="https://imgcdn.floweraura.com/Homepage_Hampercard.png?tr=w-164"
+                class="w-full h-30 md:h-30 object-cover rounded-xl md:rounded-2xl shadow group-hover:scale-105 transition"
+              />
+              <p class="mt-2 md:mt-4 text-xs md:text-sm font-bold">Hampers</p>
+            </a>
+
+            <a href="#" class="text-center group">
+              <img
+                src="https://imgcdn.floweraura.com/same-day%20(3)_4.jpg?tr=w-164"
+                class="w-full h-30 md:h-30 object-cover rounded-xl md:rounded-2xl shadow group-hover:scale-105 transition"
+              />
+              <p class="mt-2 md:mt-4 text-xs md:text-sm font-bold">Same Day</p>
+            </a>
+
+            <a href="#" class="text-center group">
+              <img
+                src="https://imgcdn.floweraura.com/International_Logo_3.jpg?tr=w-164"
+                class="w-full h-30 md:h-30 object-cover rounded-xl md:rounded-2xl shadow group-hover:scale-105 transition"
+              />
+              <p class="mt-2 md:mt-4 text-xs md:text-sm font-bold">
+                International
+              </p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 🎯 BANNER SECTION (mobile me neeche) -->
+      <section
+        class="max-w-7xl mx-auto mt-4 md:mt-6 px-3 sm:px-4 md:px-0 order-2 md:order-1"
+      >
+        <div class="relative overflow-hidden rounded-xl">
+          <div id="slider" class="flex transition-transform duration-500">
+            <img
+              src="https://imgcdn.floweraura.com/sunFlowers_banner_desktop.jpg"
+              class="w-full flex-shrink-0 object-cover h-52 sm:h-64 md:h-auto"
+            />
+            <img
+              src="https://imgcdn.floweraura.com/flower_banner_Web_1583x426_0.jpg"
+              class="w-full flex-shrink-0 object-cover h-52 sm:h-64 md:h-auto"
+            />
+            <img
+              src="https://imgcdn.floweraura.com/banner_Web_1583x426_4.jpg"
+              class="w-full flex-shrink-0 object-cover h-52 sm:h-64 md:h-auto"
+            />
+            <img
+              src="https://imgcdn.floweraura.com/pollution-banner-web.jpg"
+              class="w-full flex-shrink-0 object-cover h-52 sm:h-64 md:h-auto"
+            />
+            <img
+              src="https://imgcdn.floweraura.com/hamper_homepage-banner-desktop2.jpg"
+              class="w-full flex-shrink-0 object-cover h-52 sm:h-64 md:h-auto"
+            />
+          </div>
+
+          <!-- DOTS -->
+          <div
+            class="absolute bottom-2 md:bottom-4 left-1/2 -translate-x-1/2 flex space-x-2"
+          >
+            <button
+              onclick="goToSlide(0)"
+              class="dot w-2 h-2 md:w-3 md:h-3 rounded-full bg-gray-400"
+            ></button>
+            <button
+              onclick="goToSlide(1)"
+              class="dot w-2 h-2 md:w-3 md:h-3 rounded-full bg-gray-400"
+            ></button>
+            <button
+              onclick="goToSlide(2)"
+              class="dot w-2 h-2 md:w-3 md:h-3 rounded-full bg-gray-400"
+            ></button>
+            <button
+              onclick="goToSlide(3)"
+              class="dot w-2 h-2 md:w-3 md:h-3 rounded-full bg-gray-400"
+            ></button>
+            <button
+              onclick="goToSlide(4)"
+              class="dot w-2 h-2 md:w-3 md:h-3 rounded-full bg-gray-400"
+            ></button>
+          </div>
+        </div>
+      </section>
+    </section>
+
+      <!-- ================== BEST SELLING ================== -->
+    
+  <section class="bg-white py-6 md:py-10">
+     <div class="max-w-7xl mx-auto px-4">
+
+    <!-- Heading -->
+    <div class="flex justify-between items-center mb-2">
+      <h2 class="text-lg md:text-2xl font-semibold">
+        Best Selling Flowers & Gifts
+      </h2>
+      <a href="#" class="text-sm md:text-lg text-white font-medium py-1 md:py-2 px-4 md:px-8 bg-blue-900 rounded-lg">
+        View All
+      </a>
+    </div>
+
+      <p class="text-gray-500 mb-4 md:mb-6 text-sm md:text-base">
+      Surprise Your Loved Ones
+    </p>
+
+    <!-- ✅ MOBILE SLIDER | DESKTOP GRID -->
+        <div class="flex md:grid md:grid-cols-4 gap-4 md:gap-6 overflow-x-auto md:overflow-visible">
+         
+          <div
+            class="min-w-[75%] sm:min-w-[48%] md:min-w-0 bg-white border-2 rounded-xl border-gray-300 overflow-hidden"
+          >
+            <div class="relative">
+
+              <img
+                src="https://imgcdn.floweraura.com/IMG_6360.jpg"
+                class="w-full h-70 object-cover transition duration-500 hover:scale-110"
+              />
+
+           
+              <div
+                class="absolute top-3 right-3 bg-black/40 p-2 rounded-full cursor-pointer"
+              >
+                <img
+                  src="https://imgcdn.floweraura.com/ssr-build/static/media/heartWhite.24820693.svg"
+                  class="w-5 h-5"
+                  alt="wishlist"
+                />
+              </div>
+            </div>
+
+            
+            <div class="p-4 bg-white">
+              <div
+                class="bg-blue-100 text-indigo-900 text-xs px-3 py-1 rounded inline-block mb-1 font-semibold"
+              >
+                30-Min Delivery
+              </div>
+
+
+              <h3 class="text-base font-medium text-gray-800">
+                10 Red Roses Bouquet
+              </h3>
+
+              <div class="flex items-center gap-2 mt-1">
+                <span class="font-semibold text-black text-base">₹695</span>
+                <span
+                  class="line-through text-[15px] font-semibold text-gray-400 text-sm"
+                  >₹770</span
+                >
+                <span class="text-orange-500 text-[15px] font-semibold"
+                  >10% OFF</span
+                >
+              </div>
+
+              <div class="flex items-center gap-2 mt-3 text-sm">
+                <span
+                  class="font-medium text-white bg-green-600 px-2 py-1 rounded text-[15px]"
+                  >★ 4.9</span
+                >
+                <span class="text-gray-600 text-[15px]">(1645 reviews)</span>
+              </div>
+            </div>
+          </div>
+
+
+          <div
+            class="min-w-[75%] sm:min-w-[48%] md:min-w-0 bg-white border-2 rounded-xl border-gray-300 overflow-hidden"
+          >
+
+            <div class="relative">
+
+              <img
+                src="https://imgcdn.floweraura.com/0E4A4515.jpg?tr=h-304,w-304"
+                class="w-full h-70 object-cover transition duration-500 hover:scale-110"
+              />
+
+
+              <div
+                class="absolute top-3 right-3 bg-black/40 p-2 rounded-full cursor-pointer"
+              >
+                <img
+                  src="https://imgcdn.floweraura.com/ssr-build/static/media/heartWhite.24820693.svg"
+                  class="w-5 h-5"
+                  alt="wishlist"
+                />
+              </div>
+            </div>
+
+
+            <div class="p-4 bg-white">
+
+
+              <div
+                class="bg-blue-100 text-indigo-900 text-xs px-3 py-1 rounded inline-block mb-1 font-semibold"
+              >
+                30-Min Delivery
+              </div>
+
+
+              <h3 class="text-base font-medium text-gray-800">
+                Profuse Jade Terrarium
+              </h3>
+
+
+              <div class="flex items-center gap-2 mt-1">
+                <span class="font-semibold text-black text-base">₹695</span>
+                <span
+                  class="line-through text-[15px] font-semibold text-gray-400 text-sm"
+                  >₹770</span
+                >
+                <span class="text-orange-500 text-[15px] font-semibold"
+                  >31% OFF</span
+                >
+              </div>
+
+
+              <div class="flex items-center gap-2 mt-3 text-sm">
+                <span
+                  class="font-medium text-white bg-green-600 px-2 py-1 rounded text-[15px]"
+                  >★ 4.9</span
+                >
+                <span class="text-gray-600 text-[15px]">(68 reviews)</span>
+              </div>
+            </div>
+          </div>
+
+
+          <div
+            class="min-w-[75%] sm:min-w-[48%] md:min-w-0 bg-white border-2 rounded-xl border-gray-300 overflow-hidden"
+          >
+
+            <div class="relative">
+
+              <img
+                src="https://imgcdn.floweraura.com/blue-orchids-bouquet-n-choco-cake-9813430co-C_1.jpg"
+                class="w-full h-70 object-cover transition duration-500 hover:scale-110"
+              />
+
+
+              <div
+                class="absolute top-3 right-3 bg-black/40 p-2 rounded-full cursor-pointer"
+              >
+                <img
+                  src="https://imgcdn.floweraura.com/ssr-build/static/media/heartWhite.24820693.svg"
+                  class="w-5 h-5"
+                  alt="wishlist"
+                />
+              </div>
+            </div>
+
+
+            <div class="p-4 bg-white">
+
+              <div
+                class="bg-blue-100 text-indigo-900 text-xs px-3 py-1 rounded inline-block mb-1 font-semibold"
+              >
+                30-Min Delivery
+              </div>
+
+
+              <h3 class="text-base font-medium text-gray-800">
+                Profuse Jade Terrarium
+              </h3>
+
+
+              <div class="flex items-center gap-2 mt-1">
+                <span class="font-semibold text-black text-base">₹695</span>
+                <span
+                  class="line-through text-[15px] font-semibold text-gray-400 text-sm"
+                  >₹770</span
+                >
+                <span class="text-orange-500 text-[15px] font-semibold"
+                  >31% OFF</span
+                >
+              </div>
+
+
+              <div class="flex items-center gap-2 mt-3 text-sm">
+                <span
+                  class="font-medium text-white bg-green-600 px-2 py-1 rounded text-[15px]"
+                  >★ 4.9</span
+                >
+                <span class="text-gray-600 text-[15px]">(68 reviews)</span>
+              </div>
+            </div>
+          </div>
+
+
+          <div
+            class="min-w-[75%] sm:min-w-[48%] md:min-w-0 bg-white border-2 rounded-xl border-gray-300 overflow-hidden"
+          >
+
+            <div class="relative">
+         
+              <img
+                src="https://imgcdn.floweraura.com/IMG_9434.jpg"
+                class="w-full h-70 object-cover transition duration-500 hover:scale-110"
+              />
+
+
+              <div
+                class="absolute top-3 right-3 bg-black/40 p-2 rounded-full cursor-pointer"
+              >
+                <img
+                  src="https://imgcdn.floweraura.com/ssr-build/static/media/heartWhite.24820693.svg"
+                  class="w-5 h-5"
+                  alt="wishlist"
+                />
+              </div>
+            </div>
+
+
+            <div class="p-4 bg-white">
+             
+              <div
+                class="bg-blue-100 text-indigo-900 text-xs px-3 py-1 rounded inline-block mb-1 font-semibold"
+              >
+                30-Min Delivery
+              </div>
+
+
+              <h3 class="text-base font-medium text-gray-800">
+                Profuse Jade Terrarium
+              </h3>
+
+
+              <div class="flex items-center gap-2 mt-1">
+                <span class="font-semibold text-black text-base">₹695</span>
+                <span
+                  class="line-through text-[15px] font-semibold text-gray-400 text-sm"
+                  >₹770</span
+                >
+                <span class="text-orange-500 text-[15px] font-semibold"
+                  >31% OFF</span
+                >
+              </div>
+
+
+              <div class="flex items-center gap-2 mt-3 text-sm">
+                <span
+                  class="font-medium text-white bg-green-600 px-2 py-1 rounded text-[15px]"
+                  >★ 4.9</span
+                >
+                <span class="text-gray-600 text-[15px]">(68 reviews)</span>
+              </div>
+            </div>
+          </div>
+
+
+          <div
+            class="min-w-[75%] sm:min-w-[48%] md:min-w-0 bg-white border-2 rounded-xl border-gray-300 overflow-hidden"
+          >
+            <!-- Image Section -->
+            <div class="relative">
+              <!-- Image (HEIGHT INCREASED) -->
+              <img
+                src="https://imgcdn.floweraura.com/pastel-blooms-of-serenity-9721530fl-A_0.jpg"
+                class="w-full h-70 object-cover"
+              />
+
+              <!-- Heart Icon -->
+              <div
+                class="absolute top-3 right-3 bg-black/40 p-2 rounded-full cursor-pointer"
+              >
+                <img
+                  src="https://imgcdn.floweraura.com/ssr-build/static/media/heartWhite.24820693.svg"
+                  class="w-5 h-5"
+                  alt="wishlist"
+                />
+              </div>
+            </div>
+
+            <!-- Content Section -->
+            <div class="p-4 bg-white">
+              <!-- padding increased -->
+
+              <!-- Delivery Badge -->
+              <div
+                class="bg-blue-100 text-indigo-900 text-xs px-3 py-1 rounded inline-block mb-1 font-semibold"
+              >
+                30-Min Delivery
+              </div>
+
+              <!-- Title -->
+              <h3 class="text-base font-medium text-gray-800">
+                Profuse Jade Terrarium
+              </h3>
+
+              <!-- Price -->
+              <div class="flex items-center gap-2 mt-1">
+                <span class="font-semibold text-black text-base">₹695</span>
+                <span
+                  class="line-through text-[15px] font-semibold text-gray-400 text-sm"
+                  >₹770</span
+                >
+                <span class="text-orange-500 text-[15px] font-semibold"
+                  >31% OFF</span
+                >
+              </div>
+
+              <!-- Rating -->
+              <div class="flex items-center gap-2 mt-3 text-sm">
+                <span
+                  class="font-medium text-white bg-green-600 px-2 py-1 rounded text-[15px]"
+                  >★ 4.9</span
+                >
+                <span class="text-gray-600 text-[15px]">(68 reviews)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div
+            class="min-w-[75%] sm:min-w-[48%] md:min-w-0 bg-white border-2 rounded-xl border-gray-300 overflow-hidden"
+          >
+            <!-- Image Section -->
+            <div class="relative">
+              <!-- Image (HEIGHT INCREASED) -->
+              <img
+                src="https://imgcdn.floweraura.com/red-roses-wrapped-in-heartfelt-devotion-9719400fl-A_0.jpg"
+                class="w-full h-70 object-cover transition duration-500 hover:scale-110"
+              />
+
+              <!-- Heart Icon -->
+              <div
+                class="absolute top-3 right-3 bg-black/40 p-2 rounded-full cursor-pointer"
+              >
+                <img
+                  src="https://imgcdn.floweraura.com/ssr-build/static/media/heartWhite.24820693.svg"
+                  class="w-5 h-5"
+                  alt="wishlist"
+                />
+              </div>
+            </div>
+
+            <!-- Content Section -->
+            <div class="p-4 bg-white">
+              <!-- padding increased -->
+
+              <!-- Delivery Badge -->
+              <div
+                class="bg-blue-100 text-indigo-900 text-xs px-3 py-1 rounded inline-block mb-1 font-semibold"
+              >
+                30-Min Delivery
+              </div>
+
+              <!-- Title -->
+              <h3 class="text-base font-medium text-gray-800">
+                Profuse Jade Terrarium
+              </h3>
+
+              <!-- Price -->
+              <div class="flex items-center gap-2 mt-1">
+                <span class="font-semibold text-black text-base">₹695</span>
+                <span
+                  class="line-through text-[15px] font-semibold text-gray-400 text-sm"
+                  >₹770</span
+                >
+                <span class="text-orange-500 text-[15px] font-semibold"
+                  >31% OFF</span
+                >
+              </div>
+
+              <!-- Rating -->
+              <div class="flex items-center gap-2 mt-3 text-sm">
+                <span
+                  class="font-medium text-white bg-green-600 px-2 py-1 rounded text-[15px]"
+                  >★ 4.9</span
+                >
+                <span class="text-gray-600 text-[15px]">(68 reviews)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 7 -->
+          <div
+            class="min-w-[75%] sm:min-w-[48%] md:min-w-0 bg-white border-2 rounded-xl border-gray-300 overflow-hidden"
+          >
+            <!-- Image Section -->
+            <div class="relative">
+              <!-- Image (HEIGHT INCREASED) -->
+              <img
+                src="https://imgcdn.floweraura.com/velvet-cake_b.jpg?tr=h-304,w-304"
+                class="w-full h-70 object-cover transition duration-500 hover:scale-110"
+              />
+
+              <!-- Heart Icon -->
+              <div
+                class="absolute top-3 right-3 bg-black/40 p-2 rounded-full cursor-pointer"
+              >
+                <img
+                  src="https://imgcdn.floweraura.com/ssr-build/static/media/heartWhite.24820693.svg"
+                  class="w-5 h-5"
+                  alt="wishlist"
+                />
+              </div>
+            </div>
+
+            <!-- Content Section -->
+            <div class="p-4 bg-white">
+              <!-- padding increased -->
+
+              <!-- Delivery Badge -->
+              <div
+                class="bg-blue-100 text-indigo-900 text-xs px-3 py-1 rounded inline-block mb-1 font-semibold"
+              >
+                30-Min Delivery
+              </div>
+
+              <!-- Title -->
+              <h3 class="text-base font-medium text-gray-800">
+                Profuse Jade Terrarium
+              </h3>
+
+              <!-- Price -->
+              <div class="flex items-center gap-2 mt-1">
+                <span class="font-semibold text-black text-base">₹695</span>
+                <span
+                  class="line-through text-[15px] font-semibold text-gray-400 text-sm"
+                  >₹770</span
+                >
+                <span class="text-orange-500 text-[15px] font-semibold"
+                  >31% OFF</span
+                >
+              </div>
+
+              <!-- Rating -->
+              <div class="flex items-center gap-2 mt-3 text-sm">
+                <span
+                  class="font-medium text-white bg-green-600 px-2 py-1 rounded text-[15px]"
+                  >★ 4.9</span
+                >
+                <span class="text-gray-600 text-[15px]">(68 reviews)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 8 -->
+          <div
+            class="min-w-[75%] sm:min-w-[48%] md:min-w-0 bg-white border-2 rounded-xl border-gray-300 overflow-hidden"
+          >
+            <!-- Image Section -->
+            <div class="relative">
+              <!-- Image (HEIGHT INCREASED) -->
+              <img
+                src="https://imgcdn.floweraura.com/IMG_9310.jpg?tr=h-304,w-304"
+                class="w-full h-70 object-cover transition duration-500 hover:scale-110"
+              />
+
+              <!-- Heart Icon -->
+              <div
+                class="absolute top-3 right-3 bg-black/40 p-2 rounded-full cursor-pointer"
+              >
+                <img
+                  src="https://imgcdn.floweraura.com/ssr-build/static/media/heartWhite.24820693.svg"
+                  class="w-5 h-5"
+                  alt="wishlist"
+                />
+              </div>
+            </div>
+
+            <!-- Content Section -->
+            <div class="p-4 bg-white">
+              <!-- padding increased -->
+
+              <!-- Delivery Badge -->
+              <div
+                class="bg-blue-100 text-indigo-900 text-xs px-3 py-1 rounded inline-block mb-1 font-semibold"
+              >
+                30-Min Delivery
+              </div>
+
+              <!-- Title -->
+              <h3 class="text-base font-medium text-gray-800">
+                Profuse Jade Terrarium
+              </h3>
+
+              <!-- Price -->
+              <div class="flex items-center gap-2 mt-1">
+                <span class="font-semibold text-black text-base">₹695</span>
+                <span
+                  class="line-through text-[15px] font-semibold text-gray-400 text-sm"
+                  >₹770</span
+                >
+                <span class="text-orange-500 text-[15px] font-semibold"
+                  >31% OFF</span
+                >
+              </div>
+
+              <!-- Rating -->
+              <div class="flex items-center gap-2 mt-3 text-sm">
+                <span
+                  class="font-medium text-white bg-green-600 px-2 py-1 rounded text-[15px]"
+                  >★ 4.9</span
+                >
+                <span class="text-gray-600 text-[15px]">(68 reviews)</span>
+              </div>
+            </div>
+          </div>
+
+           </div>
+
+  </div>
+</section> 
+  
+    <!-- ================== OCCASION SECTION ================== -->
+<section class="bg-white py-6 md:py-10">
+  <div class="max-w-7xl mx-auto px-4">
+     <h2 class="text-xl md:text-3xl font-semibold text-center">
+      Shop By Occasions & Relations
+    </h2>
+    <p class="text-center text-gray-500 mt-2 mb-6 md:mb-12 font-medium text-sm md:text-lg">
+      Surprise Your Loved Ones
+    </p>
+
+     <!-- ✅ MOBILE: TOP 2 CARDS -->
+    <div class="flex md:hidden gap-4">
+      
+      <a href="#" class="w-1/2 text-center">
+        <div class="overflow-hidden rounded-t-lg">
+          <img src="https://imgcdn.floweraura.com/birthday_6.png"
+            class="w-full h-40 object-cover" />
+        </div>
+        <p class="py-2 border border-gray-300 rounded-b-xl">Birthday Gifts</p>
+      </a>
+
+      <a href="#" class="w-1/2 text-center">
+        <div class="overflow-hidden rounded-t-lg">
+          <img src="https://imgcdn.floweraura.com/anniversary_7.png"
+            class="w-full h-40 object-cover" />
+        </div>
+        <p class="py-2 border border-gray-300 rounded-b-xl">Anniversary Gifts</p>
+      </a>
+
+    </div>
+     <!-- ✅ DESKTOP: ORIGINAL SLIDER (UNCHANGED) -->
+       <div class="hidden md:flex justify-center gap-6 overflow-x-auto scrollbar-hide mt-6">
+        <a href="#" class="min-w-[220px] text-center">
+            
+            <div class="overflow-hidden rounded-t-lg">
+              <img
+                src="https://imgcdn.floweraura.com/birthday_6.png?tr=h-289,w-289"
+                class="w-full h-68 object-cover transition duration-500 hover:scale-110"
+              />
+            </div>
+            <p
+              class="py-2 font-medium border border-gray-400 rounded-b-2xl bg-white"
+            >
+              Birthday Gifts
+            </p>
+          </a>
+
+          <a href="#" class="min-w-[220px] text-center">
+            <div class="overflow-hidden rounded-t-lg">
+              <img
+                src="https://imgcdn.floweraura.com/anniversary_7.png?tr=h-289,w-289"
+                class="w-full h-68 object-cover transition duration-500 hover:scale-110"
+              />
+            </div>
+            <p class="py-2 font-medium border border-gray-400 rounded-b-2xl">
+              Anniversary Gifts
+            </p>
+          </a>
+
+          <a href="#" class="min-w-[220px] text-center group">
+            <div class="overflow-hidden rounded-t-lg">
+              <img
+                src="https://imgcdn.floweraura.com/gift_for_him_0.png?tr=h-289,w-289"
+                class="w-full h-68 object-cover transition duration-500 hover:scale-110"
+              />
+            </div>
+            <p class="py-2 font-medium border border-gray-400 rounded-b-2xl">
+              Gifts for Him
+            </p>
+          </a>
+
+          <a href="#" class="min-w-[220px] text-center group">
+            <div class="overflow-hidden rounded-t-lg">
+              <img
+                src="https://imgcdn.floweraura.com/gift_for_her_0.png?tr=h-289,w-289"
+                class="w-full h-68 object-cover transition duration-500 hover:scale-110"
+              />
+            </div>
+            <p class="font-medium py-2 border border-gray-400 rounded-b-2xl">
+              Gifts for Her
+            </p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- STORIES (MOBILE ONLY) -->
+<section class="md:hidden px-4 py-4">
+  
+  <div class="flex gap-4 overflow-x-auto scrollbar-hide justify-center md:justify-start">
+
+    <!-- Story 1 -->
+    <div class="flex flex-col items-center min-w-[90px]">
+      <div class="relative w-30 h-30 rounded-lg border-2 border-pink-500 p-[2px]">
+        
+        <div class="w-full h-full rounded-lg overflow-hidden">
+          <img
+            src="https://imgcdn.floweraura.com/video_story/flowers (3).png"
+            class="w-full h-full object-cover"
+          />
+        </div>
+
+        <!-- Overlay -->
+        <div class="absolute inset-0 flex items-center justify-center bg-black/30 rounded-full">
+          <img
+            src="https://imgcdn.floweraura.com/fa-icons/play-icon-white.svg"
+            class="w-5 h-5"
+          />
+        </div>
+      </div>
+
+      <p class="text-xs mt-2 font-medium">Flowers</p>
+    </div>
+
+    <!-- Story 2 -->
+    <div class="flex flex-col items-center min-w-[90px]">
+      <div class="relative w-30 h-30 rounded-lg border-2 border-pink-500 p-[2px]">
+        
+        <div class="w-full h-full rounded-lg overflow-hidden">
+          <img
+            src="https://imgcdn.floweraura.com/video_story/plant.png"
+            class="w-full h-full object-cover"
+          />
+        </div>
+
+        <div class="absolute inset-0 flex items-center justify-center bg-black/30 rounded-full">
+          <img
+            src="https://imgcdn.floweraura.com/fa-icons/play-icon-white.svg"
+            class="w-5 h-5"
+          />
+        </div>
+      </div>
+
+      <p class="text-xs mt-2 font-medium">Plants</p>
+    </div>
+
+    <!-- Story 3 -->
+    <div class="flex flex-col items-center min-w-[90px]">
+      <div class="relative w-30 h-30 rounded-lg border-2 border-pink-500 p-[2px]">
+        
+        <div class="w-full h-full rounded-lg overflow-hidden">
+          <img
+            src="https://imgcdn.floweraura.com/video_story/3 (1) (1).png"
+            class="w-full h-full object-cover"
+          />
+        </div>
+
+        <div class="absolute inset-0 flex items-center justify-center bg-black/30 rounded-full">
+          <img
+            src="https://imgcdn.floweraura.com/fa-icons/play-icon-white.svg"
+            class="w-5 h-5"
+          />
+        </div>
+      </div>
+
+      <p class="text-xs mt-2 font-medium">BAU</p>
+    </div>
+
+  </div>
+</section>
+    
+<!-- ================== MOBILE REMAINING CARDS ================== -->
+<section class="bg-white pb-6 md:hidden">
+  <div class="max-w-7xl mx-auto px-4">
+
+    <div class="grid grid-cols-2 gap-4">
+
+      <a href="#" class="text-center">
+        <img src="https://imgcdn.floweraura.com/gift_for_him_0.png"
+          class="w-full h-40 object-cover rounded-t-lg" />
+        <p class="py-2 border border-gray-300 rounded-b-xl">Gifts for Him</p>
+      </a>
+
+      <a href="#" class="text-center">
+        <img src="https://imgcdn.floweraura.com/gift_for_her_0.png"
+          class="w-full h-40 object-cover rounded-t-lg" />
+        <p class="py-2 border border-gray-300 rounded-b-xl">Gifts for Her</p>
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+   
+<section class="py-6 md:py-10 bg-white">
+  <div class="max-w-7xl mx-auto px-3 sm:px-4 md:px-6">
+
+    <div class="overflow-hidden rounded-lg md:rounded-xl shadow">
+      <img
+        src="https://imgcdn.floweraura.com/paytm-homepage-fa-desktop_2_0.jpg"
+        alt="Offer Banner"
+        class="w-full h-50 object-cover"
+      />
+    </div>
+
+  </div>
+</section>
+
+    <section class="py-15 bg-white">
+      <div class="max-w-7xl mx-auto px-10 py-12 rounded-2xl bg-[#E7EDEF]">
+        <!-- Grid (2 cards per row) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Card 1 -->
+          <div class="bg-white rounded-2xl shadow flex overflow-hidden h-64">
+            <!-- Image Left (BIGGER) -->
+            <img
+              src="https://imgcdn.floweraura.com/Cake (3).jpg"
+              class="w-3/5 h-full object-cover"
+            />
+
+            <!-- Content Right (SMALLER) -->
+            <div class="p-4 w-2/5 flex flex-col justify-center ml-5">
+              <h3 class="font-semibold text-lg mb-2">Delicious Cakes</h3>
+
+              <div class="flex flex-col gap-3 text-[15px] text-gray-600">
+                <a href="#" class="hover:text-pink-600">Birthday Cakes</a>
+                <a href="#" class="hover:text-pink-600">Anniversary Cakes</a>
+                <a href="#" class="hover:text-pink-600">Designer Cakes</a>
+                <a href="#" class="hover:text-pink-600">Photo Cakes</a>
+                <a href="#" class="hover:text-pink-600">Chocolate Cakes</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="bg-white rounded-2xl shadow flex overflow-hidden h-64">
+            <img
+              src="https://imgcdn.floweraura.com/Gifting Gallery.jpg"
+              class="w-3/5 h-full object-cover"
+            />
+
+            <div class="p-4 w-2/5 flex flex-col justify-center ml-5">
+              <h3 class="font-semibold text-lg mb-2">Gifting Gallery</h3>
+
+              <div class="flex flex-col gap-3 text-[15px] text-gray-600">
+                <a href="#" class="hover:text-pink-600">Photo Gifts</a>
+                <a href="#" class="hover:text-pink-600">Mugs</a>
+                <a href="#" class="hover:text-pink-600">Cushions</a>
+                <a href="#" class="hover:text-pink-600">Name Gifts</a>
+                <a href="#" class="hover:text-pink-600">Caricatures</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="bg-white rounded-lg shadow flex overflow-hidden h-64">
+            <div class="p-4 w-2/5 flex flex-col justify-center ml-5">
+              <h3 class="font-semibold text-lg mb-2">Floral Delights</h3>
+
+              <div class="flex flex-col gap-3 text-[15px] text-gray-600">
+                <a href="#" class="hover:text-pink-600">Red Roses</a>
+                <a href="#" class="hover:text-pink-600">Birthday Flowers</a>
+                <a href="#" class="hover:text-pink-600">Anniversary Flowers</a>
+                <a href="#" class="hover:text-pink-600">Exotic Flowers</a>
+                <a href="#" class="hover:text-pink-600">Flower Boxes</a>
+              </div>
+            </div>
+
+            <img
+              src="https://imgcdn.floweraura.com/Floral Delights.jpg"
+              class="w-3/5 h-full object-cover"
+            />
+          </div>
+
+          <!-- Card 4 -->
+          <div class="bg-white rounded-lg shadow flex overflow-hidden h-64">
+            <div class="p-4 w-2/5 flex flex-col justify-center ml-5">
+              <h3 class="font-semibold text-lg mb-2">Plant Paradise</h3>
+
+              <div class="flex flex-col gap-3 text-[15px] text-gray-600">
+                <a href="#" class="hover:text-pink-600">Bonsai</a>
+                <a href="#" class="hover:text-pink-600">Indoor</a>
+                <a href="#" class="hover:text-pink-600">Air Purifying</a>
+                <a href="#" class="hover:text-pink-600">Lucky Bamboo</a>
+                <a href="#" class="hover:text-pink-600">Flowering</a>
+              </div>
+            </div>
+
+            <img
+              src="https://imgcdn.floweraura.com/Plant Paradise.jpg"
+              class="w-3/5 h-full object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-4 md:py-6">
+  <div class="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 my-4 md:my-5">
+    
+    <a
+      href="/refer-and-earn"
+      class="block rounded-lg md:rounded-xl overflow-hidden shadow hover:shadow-lg transition"
+    >
+      <img
+        src="https://imgcdn.floweraura.com/home-page/refer-and-earn-desktop-19-feb.jpg"
+        alt="Offer Banner"
+        class="w-full h-[180px] sm:h-[220px] md:h-[300px] object-cover md:object-cover"
+      />
+    </a>
+
+  </div>
+</section>
+
+    <section class="bg-white py-10">
+      <div class="max-w-7xl mx-auto px-4">
+        <!-- Heading -->
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-2xl font-semibold">Customer Testimonial</h2>
+          <a
+            href="#"
+            class="text-lg text-white bg-blue-900 py-2 px-5 rounded-lg font-medium"
+            >View All</a
+          >
+        </div>
+
+        <!-- Slider -->
+        <div class="flex gap-6 overflow-x-auto">
+          <!-- Card -->
+          <div
+            class="min-w-[340px] h-[230px] bg-white border rounded-2xl shadow-sm p-5 flex flex-col justify-between"
+          >
+            <!-- Review Text -->
+            <p class="text-gray-500 text-[16px] font-medium">
+              I have ordered from FlowerAura many times, and every time they
+              have been up to the mark. The red rose bouquet was fresh,
+              beautifully arranged, and delivered on time. Great quality, neat
+              packaging, and reliable servi...
+            </p>
+
+            <!-- Bottom Row (ALL IN ONE LINE) -->
+            <div class="flex justify-between items-center mt-4 text-sm">
+              <!-- Name -->
+              <h4 class="font-bold text-[16px] text-gray-800 whitespace-nowrap">
+                Dhruv Kalia
+              </h4>
+
+              <!-- Rating -->
+              <span
+                class="text-white bg-green-700 text-[14px] px-2 py-1 rounded whitespace-nowrap"
+              >
+                ★ 5
+              </span>
+
+              <!-- Date -->
+              <span class="text-gray-500 text-[14px] whitespace-nowrap">
+                Posted On : 28/02/2026
+              </span>
+            </div>
+          </div>
+
+          <!-- Card 2-->
+          <div
+            class="min-w-[340px] h-[230px] bg-white border rounded-2xl shadow-sm p-5 flex flex-col justify-between"
+          >
+            <!-- Review Text -->
+            <p class="text-gray-500 text-[16px] font-medium">
+              Awesome flowers and beautifully arranged. Had ordered for my
+              Gurumaa and she appreciated the thoughtful collection, hod bless
+              each of you in sourcing, putting all together and delivering it.
+              Thank you
+            </p>
+
+            <!-- Bottom Row (ALL IN ONE LINE) -->
+            <div class="flex justify-between items-center mt-4 text-sm">
+              <!-- Name -->
+              <h4 class="font-bold text-[15px] text-gray-800 whitespace-nowrap">
+                Sanjay Diwan
+              </h4>
+
+              <!-- Rating -->
+              <span
+                class="text-white bg-green-700 text-[14px] px-2 py-1 rounded whitespace-nowrap"
+              >
+                ★ 5
+              </span>
+
+              <!-- Date -->
+              <span class="text-gray-500 text-[14px] whitespace-nowrap">
+                Posted On : 28/02/2026
+              </span>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="min-w-[340px] h-[230px] bg-white border rounded-2xl shadow-sm p-5 flex flex-col justify-between"
+          >
+            <p class="text-gray-500 text-[16px] font-medium">
+              Thanks a lot to FlowerAura for making my moms birthday special she
+              was very happy thanks a lot
+            </p>
+
+            <div class="flex justify-between items-center mt-4 text-sm">
+              <h4 class="font-bold text-[15px] text-gray-800 whitespace-nowrap">
+                Sanjay Diwan
+              </h4>
+
+              <span
+                class="text-white bg-green-700 text-[14px] px-2 py-1 rounded whitespace-nowrap"
+              >
+                ★ 5
+              </span>
+
+              <span class="text-gray-500 text-[14px] whitespace-nowrap">
+                Posted On : 24/01/2026
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white py-10">
+      <div class="max-w-7xl mx-auto px-4">
+        <!-- Container -->
+        <div class="text-gray-700 space-y-6 leading-relaxed text-sm">
+          <!-- Heading -->
+          <h1 class="text-2xl font-semibold text-gray-900">
+            FlowerAura: Send Flowers, Cakes, Gifts & Plants Online Across India
+          </h1>
+
+          <!-- Intro -->
+          <p>
+            At FlowerAura, we take pride in delivering the highest quality
+            flowers, cakes, plants, and gifts to your loved ones. Our diverse
+            range ensures there's something perfect for every occasion. From
+            romantic roses to delightful chocolate cakes and vibrant indoor
+            plants, we have it all. As India's most trusted gifting brand, we
+            guarantee fresh and beautiful flowers, delicious cakes, vibrant
+            plants, and unique gifts that bring joy and smiles. Enjoy the
+            convenience of doorstep delivery with our safe and secure packaging,
+            ensuring your order arrives in pristine condition.<br />
+            Let’s explore our collection a little better:
+          </p>
+        </div>
+
+        <!-- Read More Button -->
+        <div class="mt-6 text-center">
+          <button class="text-[#197889] font-medium border-b border-[#197889]">
+            Read More
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white py-8">
+      <div class="max-w-7xl mx-auto px-4">
+        <!-- Heading -->
+        <h2 class="text-2xl font-semibold mb-6">Related Blog</h2>
+
+        <!-- Grid -->
+        <div class="grid md:grid-cols-3 gap-6">
+          <!-- Blog Card -->
+          <div class="overflow-hidden bg-white">
+            <img
+              src="https://imgcdn.floweraura.com/The Ultimate Flower Guide for Mumbai-D.png"
+              class="w-full h-48 object-cover rounded-lg"
+              alt=""
+            />
+
+            <div class="p-2 space-y-2">
+              <h3 class="font-semibold text-lg leading-snug">
+                The Ultimate Flower Guide for Mumbai: Popular Markets, Favourite
+                Blooms & Gifting Tips
+              </h3>
+
+              <p class="text-gray-600 text-[14px] line-clamp-3">
+                Mumbai moves fast. People are always on the go, plans change
+                quickly, and celebrations often happen in the middle of a packed
+                schedule...
+              </p>
+
+              <a
+                href="#"
+                class="text-[#197889] text-sm font-medium hover:underline inline-block"
+              >
+                Read More...
+              </a>
+            </div>
+          </div>
+
+          <!-- Blog Card -->
+          <div class="overflow-hidden bg-white">
+            <img
+              src="https://imgcdn.floweraura.com/flower-color-cover-D.jpg"
+              class="w-full h-48 object-cover rounded-lg"
+              alt=""
+            />
+
+            <div class="p-2 space-y-2">
+              <h3 class="font-semibold text-lg leading-snug">
+                The Hidden Power of Colors: Flower Color Influences Meaning
+              </h3>
+
+              <p class="text-gray-600 text-[14px] line-clamp-3">
+                Flowers have always been a symbol of beauty, nature, and love,
+                but did you know that the meaning behind different flower
+                colors...
+              </p>
+
+              <a
+                href="#"
+                class="text-[#197889] text-sm font-medium hover:underline"
+              >
+                Read More...
+              </a>
+            </div>
+          </div>
+
+          <!-- Blog Card -->
+          <div class="overflow-hidden bg-white">
+            <img
+              src="https://imgcdn.floweraura.com/Blog 512 - Cover Image-d.jpg"
+              class="w-full h-48 object-cover rounded-lg"
+              alt=""
+            />
+
+            <div class="p-2 space-y-2">
+              <h3 class="font-semibold text-lg leading-snug">
+                Why Marigolds are the Heart of Indian Festivals - Tradition,
+                Symbolism & Science
+              </h3>
+
+              <p class="text-gray-600 text-[14px] line-clamp-5">
+                The first thing you notice during Diwali is the glow. Diyas
+                flicker. Rangoli colours burst across the floor...
+              </p>
+
+              <a
+                href="#"
+                class="text-[#197889] text-sm font-medium hover:underline"
+              >
+                Read More...
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<footer class="bg-white pt-10 pb-10 text-gray-700 text-sm">
+  <div class="max-w-7xl mx-auto px-4">
+
+    <!-- TOP SECTION -->
+    <div class="bg-gray-100 rounded-3xl px-5 md:px-10 py-8 md:py-10">
+      
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+
+        <!-- RIGHT SECTION (Mobile TOP) -->
+        <div class="flex flex-col order-1 md:order-4 md:col-span-3">
+
+          <!-- Heading -->
+          <p class="text-[16px] font-medium text-center md:text-left">
+            Let us make you feel special
+          </p>
+
+          <!-- App Buttons -->
+          <div class="flex flex-col items-center md:items-start gap-3 mt-4">
+            <img
+              src="https://imgcdn.floweraura.com/fa-media/play_store.svg"
+              class="w-36 cursor-pointer hover:scale-105 transition"
+            />
+            <img
+              src="https://imgcdn.floweraura.com/fa-media/app_store.svg"
+              class="w-36 cursor-pointer hover:scale-105 transition"
+            />
+          </div>
+
+          <!-- Social Heading -->
+          <h3 class="text-sm font-semibold mt-6 text-center md:text-left">
+            Spread The Love On Social Media
+          </h3>
+
+          <!-- Social Icons -->
+          <div class="flex justify-center md:justify-start flex-wrap gap-3 mt-3">
+            <img src="https://imgcdn.floweraura.com/fa-media/facebook_logo.svg" class="w-7 h-7 cursor-pointer" />
+            <img src="https://imgcdn.floweraura.com/home-page/twitter-x.svg" class="w-7 h-7 cursor-pointer" />
+            <img src="https://imgcdn.floweraura.com/fa-media/youtube_logo.svg" class="w-7 h-7 cursor-pointer" />
+            <img src="https://imgcdn.floweraura.com/fa-logo/pinterest-logo.svg" class="w-7 h-7 cursor-pointer" />
+            <img src="https://imgcdn.floweraura.com/fa-media/fa-insta.png" class="w-7 h-7 cursor-pointer" />
+            <img src="https://imgcdn.floweraura.com/fa-media/linkdin_logo.svg" class="w-7 h-7 cursor-pointer" />
+          </div>
+        </div>
+
+        <!-- LINKS SECTION -->
+        <div class="order-2 md:order-1 md:col-span-9 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-6 text-sm font-medium text-gray-700">
+
+          <!-- Column 1 -->
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-pink-600">About Us</a></li>
+            <li><a href="#" class="hover:text-pink-600">Sell With Us</a></li>
+            <li><a href="#" class="hover:text-pink-600">Coupons & Deals</a></li>
+            <li><a href="#" class="hover:text-pink-600">Cancellation & Refund</a></li>
+            <li><a href="#" class="hover:text-pink-600">Terms and Conditions</a></li>
+            <li><a href="#" class="hover:text-pink-600">Retail Stores</a></li>
+            <li><a href="#" class="hover:text-pink-600">Career</a></li>
+          </ul>
+
+          <!-- Column 2 -->
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-pink-600">Media</a></li>
+            <li><a href="#" class="hover:text-pink-600">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-pink-600">Reviews</a></li>
+            <li><a href="#" class="hover:text-pink-600">Blog</a></li>
+            <li><a href="#" class="hover:text-pink-600">Sitemap</a></li>
+            <li><a href="#" class="hover:text-pink-600">Quotes</a></li>
+          </ul>
+
+          <!-- Column 3 -->
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-pink-600">Corporate Gifts</a></li>
+            <li><a href="#" class="hover:text-pink-600">Franchise</a></li>
+            <li><a href="#" class="hover:text-pink-600">FAQ</a></li>
+            <li><a href="#" class="hover:text-pink-600">Contact Us</a></li>
+            <li><a href="#" class="hover:text-pink-600">Download App</a></li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- BOTTOM SECTION -->
+    <div class="mt-6 pt-6 flex flex-col items-center gap-4 text-center md:flex-row md:justify-between md:text-left">
+
+      <!-- Logo + Copyright -->
+      <div class="flex flex-col items-center md:flex-row md:items-center gap-3 md:gap-6">
+        <img
+          src="https://imgcdn.floweraura.com/fa-logo/final-23-mob.svg"
+          class="w-24 md:w-30"
+        />
+        <span class="text-[14px] md:text-[15px] text-gray-800">
+          © 2026 FA GIFTS PVT. LTD
+        </span>
+      </div>
+
+      <!-- Payment -->
+      <div class="flex flex-col items-center md:flex-row gap-2">
+        <span class="text-sm font-medium">We Accept:</span>
+        <img
+          src="https://imgcdn.floweraura.com/banners/desk-payment-26.png"
+          class="h-6 md:h-8"
+        />
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+    <!-- SCRIPT -->
+    <script>
+      let index = 0;
+      const slider = document.getElementById("slider");
+      const totalSlides = slider.children.length;
+
+      function goToSlide(i) {
+        index = i;
+        updateSlider();
+      }
+
+      function updateSlider() {
+        slider.style.transform = `translateX(-${index * 100}%)`;
+      }
+
+      // Auto Slide
+      setInterval(() => {
+        index = (index + 1) % totalSlides;
+        updateSlider();
+      }, 3000);
+
+      let lastScroll = 0;
+      const header = document.getElementById("header");
+      const topHeader = document.getElementById("topHeader");
+
+      const topHeaderHeight = topHeader.offsetHeight;
+
+      window.addEventListener("scroll", () => {
+        let currentScroll = window.pageYOffset;
+
+        if (currentScroll > lastScroll) {
+          // Scroll Down → topHeader hide
+          header.style.transform = `translateY(-${topHeaderHeight}px)`;
+        } else {
+          // Scroll Up → show full header
+          header.style.transform = "translateY(0)";
+        }
+
+        lastScroll = currentScroll;
+      });
+
+      const btn = document.getElementById("menuBtn");
+      const menu = document.getElementById("mobileMenu");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>
