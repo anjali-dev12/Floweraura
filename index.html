@@ -349,7 +349,8 @@
       </a>
     </div>
 
-      <p class="text-gray-500 mb-4 md:mb-6 text-sm md:text-base">
+      <p class="text-gray-500 mb-4 md:mb-6 text-sm md:text-base 
+      ">
       Surprise Your Loved Ones
     </p>
 
@@ -1396,112 +1397,193 @@
   </div>
 </section>
 
-<footer class="bg-white pt-10 pb-10 text-gray-700 text-sm">
-  <div class="max-w-7xl mx-auto px-4">
+<footer class="bg-white text-gray-700 text-sm py-10 hidden md:block">
+
+  <div class="max-w-7xl mx-auto px-4 bg-gray-100 py-20 rounded-3xl">
 
     <!-- TOP SECTION -->
-    <div class="bg-gray-100 rounded-3xl px-5 md:px-10 py-8 md:py-10">
-      
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-5">
 
-        <!-- RIGHT SECTION (Mobile TOP) -->
-        <div class="flex flex-col order-1 md:order-4 md:col-span-3">
+      <!-- LINKS SECTION -->
+      <div class="md:col-span-9 grid grid-cols-2 md:grid-cols-3 gap-6">
 
-          <!-- Heading -->
-          <p class="text-[16px] font-medium text-center md:text-left">
-            Let us make you feel special
-          </p>
+        <!-- COLUMN 1 -->
+        <ul class="space-y-2 pl-8 text-base font-semibold">
+          <li><a href="#" class="hover:text-pink-600">About Us</a></li>
+          <li><a href="#" class="hover:text-pink-600">Sell With Us</a></li>
+          <li><a href="#" class="hover:text-pink-600">Coupons & Deals</a></li>
+          <li><a href="#" class="hover:text-pink-600">Cancellation & Refund</a></li>
+          <li><a href="#" class="hover:text-pink-600">Terms and Conditions</a></li>
+          <li><a href="#" class="hover:text-pink-600">Retail Stores</a></li>
+          <li><a href="#" class="hover:text-pink-600">Career</a></li>
+        </ul>
 
-          <!-- App Buttons -->
-          <div class="flex flex-col items-center md:items-start gap-3 mt-4">
-            <img
-              src="https://imgcdn.floweraura.com/fa-media/play_store.svg"
-              class="w-36 cursor-pointer hover:scale-105 transition"
-            />
-            <img
-              src="https://imgcdn.floweraura.com/fa-media/app_store.svg"
-              class="w-36 cursor-pointer hover:scale-105 transition"
-            />
+        <!-- COLUMN 2 -->
+        <ul class="space-y-2 text-base font-semibold">
+          <li><a href="#" class="hover:text-pink-600">Media</a></li>
+          <li><a href="#" class="hover:text-pink-600">Privacy Policy</a></li>
+          <li><a href="#" class="hover:text-pink-600">Reviews</a></li>
+          <li><a href="#" class="hover:text-pink-600">Blog</a></li>
+          <li><a href="#" class="hover:text-pink-600">Sitemap</a></li>
+          <li><a href="#" class="hover:text-pink-600">Quotes</a></li>
+        </ul>
+
+        <!-- COLUMN 3 -->
+        <ul class="space-y-2 text-base font-semibold">
+          <li><a href="#" class="hover:text-pink-600">Corporate Gifts</a></li>
+          <li><a href="#" class="hover:text-pink-600">Franchise</a></li>
+          <li><a href="#" class="hover:text-pink-600">FAQ</a></li>
+          <li><a href="#" class="hover:text-pink-600">Contact Us</a></li>
+          <li><a href="#" class="hover:text-pink-600">Download App</a></li>
+        </ul>
+
+      </div>
+
+      <!-- RIGHT SECTION -->
+      <div class="md:col-span-3 space-y-5 pr-2 text-base font-semibold">
+
+        <p class="font-medium">
+          Simplify your gifting experience with our app.
+        </p>
+
+        <!-- QR + APP -->
+        <div class="flex gap-3 items-center">
+
+          <img
+            src="https://imgcdn.floweraura.com/home-page/app-footer-qr.svg"
+            class="w-24 h-24 object-contain"
+          />
+
+          <div class="flex flex-col gap-2">
+            <img src="https://imgcdn.floweraura.com/fa-media/play_store.svg" class="w-32" />
+            <img src="https://imgcdn.floweraura.com/fa-media/app_store.svg" class="w-32" />
           </div>
 
-          <!-- Social Heading -->
-          <h3 class="text-sm font-semibold mt-6 text-center md:text-left">
-            Spread The Love On Social Media
-          </h3>
+        </div>
 
-          <!-- Social Icons -->
-          <div class="flex justify-center md:justify-start flex-wrap gap-3 mt-3">
-            <img src="https://imgcdn.floweraura.com/fa-media/facebook_logo.svg" class="w-7 h-7 cursor-pointer" />
-            <img src="https://imgcdn.floweraura.com/home-page/twitter-x.svg" class="w-7 h-7 cursor-pointer" />
-            <img src="https://imgcdn.floweraura.com/fa-media/youtube_logo.svg" class="w-7 h-7 cursor-pointer" />
-            <img src="https://imgcdn.floweraura.com/fa-logo/pinterest-logo.svg" class="w-7 h-7 cursor-pointer" />
-            <img src="https://imgcdn.floweraura.com/fa-media/fa-insta.png" class="w-7 h-7 cursor-pointer" />
-            <img src="https://imgcdn.floweraura.com/fa-media/linkdin_logo.svg" class="w-7 h-7 cursor-pointer" />
+        <!-- SOCIAL -->
+        <div>
+          <h3 class="font-semibold mb-2">Spread The Love On Social Media</h3>
+
+          <div class="flex flex-wrap gap-3">
+
+            <div class="flex justify-center md:justify-start flex-wrap gap-3 mt-3">
+            <img src="https://imgcdn.floweraura.com/fa-media/facebook_logo.svg" class="w-8 h-8 cursor-pointer" />
+            <img src="https://imgcdn.floweraura.com/home-page/twitter-x.svg" class="w-8 h-8 cursor-pointer" />
+            <img src="https://imgcdn.floweraura.com/fa-media/youtube_logo.svg" class="w-8 h-8 cursor-pointer" />
+            <img src="https://imgcdn.floweraura.com/fa-logo/pinterest-logo.svg" class="w-8 h-8 cursor-pointer" />
+            <img src="https://imgcdn.floweraura.com/fa-media/fa-insta.png" class="w-8 h-8 cursor-pointer" />
+            <img src="https://imgcdn.floweraura.com/fa-media/linkdin_logo.svg" class="w-8 h-8 cursor-pointer" />
+          </div>
+       
           </div>
         </div>
 
-        <!-- LINKS SECTION -->
-        <div class="order-2 md:order-1 md:col-span-9 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-6 text-sm font-medium text-gray-700">
-
-          <!-- Column 1 -->
-          <ul class="space-y-2">
-            <li><a href="#" class="hover:text-pink-600">About Us</a></li>
-            <li><a href="#" class="hover:text-pink-600">Sell With Us</a></li>
-            <li><a href="#" class="hover:text-pink-600">Coupons & Deals</a></li>
-            <li><a href="#" class="hover:text-pink-600">Cancellation & Refund</a></li>
-            <li><a href="#" class="hover:text-pink-600">Terms and Conditions</a></li>
-            <li><a href="#" class="hover:text-pink-600">Retail Stores</a></li>
-            <li><a href="#" class="hover:text-pink-600">Career</a></li>
-          </ul>
-
-          <!-- Column 2 -->
-          <ul class="space-y-2">
-            <li><a href="#" class="hover:text-pink-600">Media</a></li>
-            <li><a href="#" class="hover:text-pink-600">Privacy Policy</a></li>
-            <li><a href="#" class="hover:text-pink-600">Reviews</a></li>
-            <li><a href="#" class="hover:text-pink-600">Blog</a></li>
-            <li><a href="#" class="hover:text-pink-600">Sitemap</a></li>
-            <li><a href="#" class="hover:text-pink-600">Quotes</a></li>
-          </ul>
-
-          <!-- Column 3 -->
-          <ul class="space-y-2">
-            <li><a href="#" class="hover:text-pink-600">Corporate Gifts</a></li>
-            <li><a href="#" class="hover:text-pink-600">Franchise</a></li>
-            <li><a href="#" class="hover:text-pink-600">FAQ</a></li>
-            <li><a href="#" class="hover:text-pink-600">Contact Us</a></li>
-            <li><a href="#" class="hover:text-pink-600">Download App</a></li>
-          </ul>
-
-        </div>
-      </div>
-    </div>
-
-    <!-- BOTTOM SECTION -->
-    <div class="mt-6 pt-6 flex flex-col items-center gap-4 text-center md:flex-row md:justify-between md:text-left">
-
-      <!-- Logo + Copyright -->
-      <div class="flex flex-col items-center md:flex-row md:items-center gap-3 md:gap-6">
-        <img
-          src="https://imgcdn.floweraura.com/fa-logo/final-23-mob.svg"
-          class="w-24 md:w-30"
-        />
-        <span class="text-[14px] md:text-[15px] text-gray-800">
-          © 2026 FA GIFTS PVT. LTD
-        </span>
-      </div>
-
-      <!-- Payment -->
-      <div class="flex flex-col items-center md:flex-row gap-2">
-        <span class="text-sm font-medium">We Accept:</span>
-        <img
-          src="https://imgcdn.floweraura.com/banners/desk-payment-26.png"
-          class="h-6 md:h-8"
-        />
       </div>
 
     </div>
+
+   
   </div>
+
+   <!-- BOTTOM SECTION -->
+    <div class="max-w-7xl mx-auto mt-5 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+
+      <!-- LOGO -->
+      <div class="flex items-center gap-3">
+        <img src="https://imgcdn.floweraura.com/fa-logo/final-23-mob.svg" class="w-35" />
+        <span>© 2026 FA GIFTS PVT. LTD</span>
+      </div>
+
+      <!-- PAYMENT -->
+      <div class="flex items-center gap-2">
+        <span class="font-medium">We Accept:</span>
+        <img src="https://imgcdn.floweraura.com/banners/desk-payment-26.png" class="h-6" />
+      </div>
+
+    </div>
+
+</footer> 
+
+
+<footer class="bg-gray-50 text-gray-700 text-sm py-8 md:hidden">
+
+  <div class="max-w-7xl mx-auto px-4">
+
+    <!-- 1. HEADING -->
+    <p class="text-lg font-semibold text-center mb-4">
+      Let us make you feel special
+    </p>
+
+    <!-- 2. APP BUTTONS -->
+    <div class="flex justify-center gap-3 mb-6 pb-4 border-b">
+      <img src="https://imgcdn.floweraura.com/fa-media/play_store.svg" class="w-32" />
+      <img src="https://imgcdn.floweraura.com/fa-media/app_store.svg" class="w-32" />
+    </div>
+
+    <!-- 3. SOCIAL HEADING -->
+    <h3 class="text-lg font-semibold text-center mb-3">
+      Spread The Love On Social Media
+    </h3>
+
+    <!-- 4. SOCIAL ICONS -->
+    <div class="flex justify-center gap-3 mb-6 pb-4 border-b">
+      <img src="https://imgcdn.floweraura.com/fa-media/facebook_logo.svg" class="w-8 h-8" />
+      <img src="https://imgcdn.floweraura.com/home-page/twitter-x.svg" class="w-8 h-8" />
+      <img src="https://imgcdn.floweraura.com/fa-media/youtube_logo.svg" class="w-8 h-8" />
+      <img src="https://imgcdn.floweraura.com/fa-logo/pinterest-logo.svg" class="w-8 h-8" />
+      <img src="https://imgcdn.floweraura.com/fa-media/fa-insta.png" class="w-8 h-8" />
+      <img src="https://imgcdn.floweraura.com/fa-media/linkdin_logo.svg" class="w-8 h-8" />
+    </div>
+
+    <!-- 5. LIST (2 COLUMN MOBILE ONLY) -->
+    <div class="grid grid-cols-2 gap-6 text-base font-semibold mb-6 justify-items-center pb-4 border-b">
+
+  <ul class="space-y-2 text-left">
+    <li>About Us</li>
+    <li>Sell With Us</li>
+    <li>Coupons & Deals</li>
+    <li>Cancellation & Refund</li>
+    <li>Terms and Conditions</li>
+    <li>Retail Stores</li>
+    <li>Career</li>
+    <li>Media</li>
+    <li>Privacy Policy</li>
+    <li>Reviews</li>
+  </ul>
+
+  <ul class="space-y-2 text-left">
+    <li>Blog</li>
+    <li>Sitemap</li>
+    <li>Quotes</li>
+    <li>Corporate Gifts</li>
+    <li>Franchise</li>
+    <li>FAQ</li>
+    <li>Contact Us</li>
+    <li>Download App</li>
+  </ul>
+
+</div>
+    <!-- 6. LOGO -->
+    <div class="flex flex-col items-center mb-3">
+      <img src="https://imgcdn.floweraura.com/fa-logo/final-23-mob.svg" class="w-28" />
+    </div>
+
+    <!-- 7. WE ACCEPT -->
+    <p class="text-center text-[15px] font-medium mb-2">We Accept:</p>
+
+    <!-- 8. PAYMENT IMAGE -->
+    <div class="flex justify-center mb-4">
+      <img src="https://imgcdn.floweraura.com/banners/desk-payment-26.png" class="h-6" />
+    </div>
+
+    <!-- 9. COPYRIGHT -->
+    <p class="text-center text-[15px]">
+      © 2026 FA GIFTS PVT. LTD
+    </p>
+
+  </div>
+
 </footer>
 
     <!-- SCRIPT -->
