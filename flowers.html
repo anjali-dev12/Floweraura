@@ -1,0 +1,1754 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome (for icons) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <title>Premium Header</title>
+  </head>
+
+  <body class="bg-gray-50">
+    <header id="header" class="bg-white shadow-sm sticky top-0 z-50">
+      <!-- TOP HEADER -->
+      <div
+        id="topHeader"
+        class="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 py-2 md:py-3 flex items-center justify-between"
+      >
+        <!-- LEFT -->
+        <div class="flex items-center gap-3">
+          <!-- HAMBURGER (mobile only) -->
+          <button id="menuBtn" class="md:hidden text-xl">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+
+          <!-- LOGO -->
+          <img
+            src="https://imgcdn.floweraura.com/fa-logo/final-23-desk.svg"
+            class="h-10 sm:h-12 md:h-14 cursor-pointer hover:scale-105 transition"
+          />
+        </div>
+
+        <!-- SEARCH + DELIVERY (desktop only SAME UI) -->
+        <div class="max-w-xl hidden md:flex items-center gap-4 flex-1 mx-4">
+          <div
+            class="flex items-center justify-between w-64 bg-gradient-to-r from-sky-200 to-sky-50 px-4 py-3 rounded-lg cursor-pointer hover:bg-gray-50 transition"
+          >
+            <div class="flex items-center gap-2">
+              <img
+                src="https://imgcdn.floweraura.com/ssr-build/static/media/india.469977db.png"
+                class="h-5 w-7 object-contain"
+              />
+              <span class="text-sm font-medium text-gray-600">
+                Deliver to ?
+              </span>
+            </div>
+
+            <i
+              class="fa-solid fa-pen text-gray-600 hover:text-pink-600 text-sm"
+            ></i>
+          </div>
+
+          <div class="flex-1 relative">
+            <input
+              type="text"
+              placeholder="Search flowers, cakes, gifts..."
+              class="w-full border rounded py-3 pl-5 pr-12 focus:outline-none focus:ring-2 focus:ring-pink-400 bg-gray-50"
+            />
+            <i
+              class="fa-solid fa-magnifying-glass absolute right-4 top-4 text-gray-500"
+            ></i>
+          </div>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="flex items-center gap-4 md:gap-6">
+          <!-- INR -->
+          <a
+            href="#"
+            class="flex flex-col items-center text-xs hover:text-pink-500"
+          >
+            <i
+              class="fa-solid fa-indian-rupee-sign text-lg md:text-2xl text-gray-600"
+            ></i>
+            <span class="hidden md:block text-sm text-gray-700">Inr</span>
+          </a>
+
+          <!-- CART -->
+          <a
+            href="#"
+            class="relative flex flex-col items-center text-xs hover:text-pink-500"
+          >
+            <i
+              class="fa-solid fa-cart-shopping text-lg md:text-2xl text-gray-600"
+            ></i>
+            <span class="hidden md:block text-sm text-gray-700">Cart</span>
+            <span
+              class="absolute top-0 left-4 bg-orange-600 text-white text-[10px] px-1 rounded-full"
+            >
+              0
+            </span>
+          </a>
+
+          <!-- SEARCH (mobile only) -->
+          <i class="fa-solid fa-magnifying-glass text-lg md:hidden"></i>
+
+          <!-- MORE (3 dots mobile) -->
+          <i class="fa-solid fa-ellipsis-vertical text-lg md:hidden"></i>
+
+          <!-- DESKTOP EXTRA (UNCHANGED) -->
+          <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+            <!-- Track -->
+            <a
+              href="#"
+              class="flex flex-col items-center text-xs hover:text-pink-500 transition"
+            >
+              <i class="fa-solid fa-truck text-2xl text-gray-600"></i>
+              <span class="text-sm text-gray-700">Track order</span>
+            </a>
+
+            <!-- Sign In -->
+            <a
+              href="#"
+              class="flex flex-col items-center text-xs hover:text-pink-500 transition"
+            >
+              <i class="fa-solid fa-user text-2xl text-gray-600"></i>
+              <span class="text-sm text-gray-700">Sign In</span>
+            </a>
+
+            <!-- MORE (DESKTOP ONLY) -->
+            <div
+              class="relative group hidden md:flex flex-col items-center text-xs cursor-pointer hover:text-pink-500"
+            >
+              <i class="fa-solid fa-bars text-2xl text-gray-600"></i>
+              <span class="text-sm text-gray-700">More</span>
+
+              <!-- DROPDOWN -->
+              <div
+                class="absolute right-0 mt-10 w-52 bg-white shadow-xl rounded-xl opacity-0 invisible group-hover:visible group-hover:opacity-100 transition duration-200 z-50"
+              >
+                <ul class="py-2 text-sm">
+                  <li class="px-4 py-2 hover:bg-gray-100">Corporate Gifts</li>
+                  <li class="px-4 py-2 hover:bg-gray-100">My Favourites</li>
+                  <li class="px-4 py-2 hover:bg-gray-100">Gift Finder</li>
+                  <li class="px-4 py-2 hover:bg-gray-100">Refer & Earn</li>
+                  <li class="px-4 py-2 hover:bg-gray-100">Franchise</li>
+                  <li class="px-4 py-2 hover:bg-gray-100">FAQ</li>
+                  <li class="px-4 py-2 hover:bg-gray-100">About Us</li>
+                  <li class="px-4 py-2 hover:bg-gray-100">Contact Us</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ✅ MOBILE DELIVER (ALWAYS VISIBLE) -->
+      <div class="md:hidden px-4 py-3 border-b bg-white">
+        <div
+          class="flex justify-between items-center bg-sky-100 px-4 py-3 rounded-lg"
+        >
+          <span class="text-sm">Deliver to ?</span>
+          <i class="fa-solid fa-pen"></i>
+        </div>
+      </div>
+
+      <!-- ✅ MOBILE MENU (ONLY NAV) -->
+      <div id="mobileMenu" class="hidden md:hidden bg-white shadow-md">
+        <ul class="flex flex-col text-sm">
+          <li class="p-4 border-b">Flowers</li>
+          <li class="p-4 border-b">Cakes</li>
+          <li class="p-4 border-b">Combos</li>
+          <li class="p-4 border-b">Birthday</li>
+          <li class="p-4 border-b">Anniversary</li>
+          <li class="p-4 border-b">Gifts</li>
+          <li class="p-4 border-b">Personalised</li>
+          <li class="p-4 border-b">Plants</li>
+          <li class="p-4 border-b">Chocolates</li>
+          <li class="p-4 border-b">Occasion</li>
+        </ul>
+      </div>
+
+      <!-- DESKTOP NAVBAR (UNCHANGED) -->
+      <nav
+        class="hidden md:block bg-white border-t border-gray-300 border-b border-gray-300"
+      >
+        <div class="max-w-7xl mx-auto px-6 text-center">
+          <ul class="flex space-x-8 py-4 font-medium justify-center">
+            <li>
+              <a href="flowers.html" class="hover:text-pink-600">Flowers</a>
+            </li>
+            <li><a href="#" class="hover:text-pink-600">Cakes</a></li>
+            <li><a href="#" class="hover:text-pink-600">Combos</a></li>
+            <li><a href="#" class="hover:text-pink-600">Birthday</a></li>
+            <li><a href="#" class="hover:text-pink-600">Anniversary</a></li>
+            <li><a href="#" class="hover:text-pink-600">Gifts</a></li>
+            <li><a href="#" class="hover:text-pink-600">Personalised</a></li>
+            <li><a href="#" class="hover:text-pink-600">Plants</a></li>
+            <li><a href="#" class="hover:text-pink-600">Chocolates</a></li>
+            <li><a href="#" class="hover:text-pink-600">Occasion</a></li>
+            <li><a href="#" class="hover:text-pink-600">International</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <section class="w-full">
+      <div class="max-w-7xl mx-auto px-4 py-6">
+        <!-- TITLE (Always Visible) -->
+        <h1 class="text-2xl md:text-3xl font-semibold text-gray-800 mb-3">
+          Elegant Lily Flower Bouquets
+        </h1>
+
+        <!-- BOTTOM ROW (Hidden on mobile, visible on md and above) -->
+        <div class="hidden md:flex md:items-center md:justify-between gap-3">
+          <!-- LEFT: BREADCRUMB -->
+          <div class="flex flex-wrap items-center text-sm text-gray-600 gap-1">
+            <a href="/" class="underline">Home</a>
+            <span>&gt;</span>
+
+            <a href="/flowers" class="underline">Flowers</a>
+            <span>&gt;</span>
+
+            <span class="text-gray-500">Lilies</span>
+          </div>
+
+          <!-- RIGHT: INFO -->
+          <div class="text-sm text-gray-900 md:text-right">
+            Item 23 of 23 Total | Ranging From ₹1195 to ₹4445
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="w-full px-2 md:px-2 py-4">
+      <div
+        class="w-full max-w-7xl mx-auto bg-white py-6 md:py-10 px-3 md:px-10 rounded-xl md:rounded-3xl"
+      >
+        <!-- TOP FILTER BAR -->
+        <div class="hidden md:flex flex-col md:flex-row md:justify-between gap-4 mb-6">
+          <!-- SORT (Mobile pe first) -->
+          <div class="order-1 md:order-2 w-full md:w-fit">
+            <button
+              onclick="toggleSort()"
+              class="w-full md:w-40 px-3 py-2 border border-[#197889] rounded-md text-base font-semibold flex items-center justify-between"
+            >
+              Popularity
+              <i class="fa-solid fa-chevron-down text-xs text-[#197889]"></i>
+            </button>
+
+            <ul
+              id="sortMenu"
+              class="hidden absolute right-0 mt-0 w-40 bg-white border border-[#197889] rounded-md text-sm overflow-hidden"
+            >
+              <li
+                class="px-3 py-2 border-b border-[#197889] hover:bg-gray-50 cursor-pointer bg-gray-50"
+              >
+                Popularity
+              </li>
+              <li
+                class="px-3 py-2 border-b border-[#197889] hover:bg-gray-50 cursor-pointer"
+              >
+                Price: Low to High
+              </li>
+              <li class="px-3 py-2 hover:bg-gray-50 cursor-pointer">
+                Price: High to Low
+              </li>
+            </ul>
+          </div>
+
+          <!-- FILTERS (Mobile me second, ek row me) -->
+          <div
+            class="order-2 md:order-1 flex gap-3 flex-nowrap overflow-x-auto"
+          >
+            <label
+              class="whitespace-nowrap px-4 py-2 border border-[#197889] rounded-lg text-sm cursor-pointer"
+            >
+              Flowers in Boxes
+            </label>
+
+            <label
+              class="whitespace-nowrap px-4 py-2 border border-[#197889] rounded-lg text-sm cursor-pointer"
+            >
+              Flower Bouquet
+            </label>
+          </div>
+        </div>
+
+        <div class="flex md:hidden items-center gap-3 mb-6 overflow-x-auto">
+
+  <!-- SORT -->
+  <div class="flex-shrink-0">
+    <button
+      onclick="toggleSort()"
+      class="whitespace-nowrap px-3 py-2 border border-[#197889] rounded-md text-sm font-semibold flex items-center gap-2"
+    >
+      Popularity
+      <i class="fa-solid fa-chevron-down text-xs text-[#197889]"></i>
+    </button>
+
+    <!-- DROPDOWN -->
+    <ul
+      id="sortMenu"
+      class="hidden absolute mt-1 w-40 bg-white border border-[#197889] rounded-md text-sm overflow-hidden z-50"
+    >
+      <li class="px-3 py-2 border-b border-[#197889] hover:bg-gray-50 cursor-pointer bg-gray-50">
+        Popularity
+      </li>
+      <li class="px-3 py-2 border-b border-[#197889] hover:bg-gray-50 cursor-pointer">
+        Price: Low to High
+      </li>
+      <li class="px-3 py-2 hover:bg-gray-50 cursor-pointer">
+        Price: High to Low
+      </li>
+    </ul>
+  </div>
+
+  <!-- FILTER 1 -->
+  <label class="flex-shrink-0 whitespace-nowrap px-4 py-2 border border-[#197889] rounded-lg text-xs cursor-pointer">
+    Flowers in Boxes
+  </label>
+
+  <!-- FILTER 2 -->
+  <label class="flex-shrink-0 whitespace-nowrap px-4 py-2 border border-[#197889] rounded-lg text-xs cursor-pointer">
+    Flower Bouquet
+  </label>
+
+        </div>
+        
+        <!-- PRODUCT GRID -->
+        <div
+          class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-6 lg:gap-10"
+        >
+          <!-- PRODUCT CARD -->
+          <div
+            class="w-full border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition bg-white"
+          >
+            <!-- IMAGE -->
+            <div class="relative overflow-hidden h-36 sm:h-44 md:h-52 lg:h-64">
+              <div class="slider flex transition-transform duration-500">
+                <img
+                  src="https://imgcdn.floweraura.com/lily-luxe-elegance-9781090fl-A.jpg"
+                  class="w-full h-full object-cover flex-shrink-0"
+                />
+
+                <img
+                  src="https://imgcdn.floweraura.com/lily-luxe-elegance-9781090fl-B.jpg"
+                  class="w-full h-full object-cover flex-shrink-0"
+                />
+
+                <img
+                  src="https://imgcdn.floweraura.com/lily-luxe-elegance-9781090fl-C.jpg"
+                  class="w-full h-full object-cover flex-shrink-0"
+                />
+              </div>
+
+              <!-- HEART -->
+              <div
+                class="absolute top-1 right-1 bg-black/40 p-1.5 rounded-full"
+              >
+                <img
+                  src="https://imgcdn.floweraura.com/ssr-build/static/media/heartWhite.24820693.svg"
+                  class="w-4 h-4"
+                  alt="wishlist"
+                />
+              </div>
+            </div>
+
+            <!-- CONTENT -->
+            <div class="p-2 md:p-3">
+              <!-- TITLE -->
+              <h3
+                class="font-medium text-xs sm:text-sm text-gray-800 line-clamp-1"
+              >
+                Lily Luxe Elegance
+              </h3>
+
+              <!-- PRICE -->
+              <div class="flex gap-1 items-center mt-1">
+                <span class="font-semibold text-sm md:text-base text-gray-800"
+                  >₹1895</span
+                >
+                <span class="line-through text-gray-400 text-xs md:text-sm"
+                  >₹2045</span
+                >
+                <span class="text-orange-500 font-medium text-xs">8% OFF</span>
+              </div>
+
+              <!-- RATING -->
+              <div class="flex items-center gap-1 mt-1">
+                <span
+                  class="text-white bg-green-600 px-1.5 py-[1px] rounded text-[10px] flex items-center gap-1"
+                >
+                  ★ 4.9
+                </span>
+                <span class="text-gray-600 text-[10px] md:text-xs">(1645)</span>
+              </div>
+
+              <!-- DELIVERY -->
+              <div class="flex items-center justify-between mt-1">
+                <span
+                  class="text-gray-700 text-[10px] md:text-xs leading-tight"
+                >
+                  Delivery: <span class="font-medium">3 hrs</span>
+                </span>
+
+                <img
+                  src="https://imgcdn.floweraura.com/ssr-build/static/media/contains-icon.0d5aaeea.svg"
+                  class="w-4 h-4"
+                  alt="icon"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- PRODUCT CARD1 -->
+          <div
+            class="w-full border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition bg-white"
+          >
+            <!-- IMAGE -->
+            <div class="relative overflow-hidden h-36 sm:h-44 md:h-52 lg:h-64">
+              <!-- BADGE -->
+              <span
+                class="absolute top-0 left-0 bg-[#197889] text-white text-[10px] sm:text-xs md:text-sm font-semibold px-2 sm:px-3 py-1 sm:py-1.5 rounded-tl-xl rounded-br-xl z-10"
+              >
+                Best Seller
+              </span>
+
+              <!-- SLIDER -->
+              <div class="slider flex transition-transform duration-500">
+                <img
+                  src="https://imgcdn.floweraura.com/a-calming-call-of-blooms-9774040fl-A.jpg"
+                  class="w-full h-full object-cover flex-shrink-0"
+                />
+
+                <img
+                  src="https://imgcdn.floweraura.com/flower-description-2_0.jpg"
+                  class="w-full h-full object-cover flex-shrink-0"
+                />
+
+                <img
+                  src="https://imgcdn.floweraura.com/a-calming-call-of-blooms-9774040fl-D.jpg"
+                  class="w-full h-full object-cover flex-shrink-0"
+                />
+
+                <img
+                  src="https://imgcdn.floweraura.com/flower-description-2_0.jpg"
+                  class="w-full h-full object-cover flex-shrink-0"
+                />
+              </div>
+
+              <!-- HEART -->
+              <div
+                class="absolute top-1 right-1 bg-black/40 p-1.5 rounded-full"
+              >
+                <img
+                  src="https://imgcdn.floweraura.com/ssr-build/static/media/heartWhite.24820693.svg"
+                  class="w-4 h-4"
+                  alt="wishlist"
+                />
+              </div>
+            </div>
+
+            <!-- CONTENT -->
+            <div class="p-2 md:p-3">
+              <!-- TITLE -->
+              <h3
+                class="font-medium text-xs sm:text-sm text-gray-800 line-clamp-1"
+              >
+                Lily Luxe Elegance
+              </h3>
+
+              <!-- PRICE -->
+              <div class="flex gap-1 items-center mt-1">
+                <span class="font-semibold text-sm md:text-base text-gray-800"
+                  >₹1895</span
+                >
+                <span class="line-through text-gray-400 text-xs md:text-sm"
+                  >₹2045</span
+                >
+                <span class="text-orange-500 font-medium text-xs">8% OFF</span>
+              </div>
+
+              <!-- RATING -->
+              <div class="flex items-center gap-1 mt-1">
+                <span
+                  class="text-white bg-green-600 px-1.5 py-[1px] rounded text-[10px] flex items-center gap-1"
+                >
+                  ★ 4.9
+                </span>
+                <span class="text-gray-600 text-[10px] md:text-xs">(1645)</span>
+              </div>
+
+              <!-- DELIVERY -->
+              <div class="flex items-center justify-between mt-1">
+                <span
+                  class="text-gray-700 text-[10px] md:text-xs leading-tight"
+                >
+                  Delivery: <span class="font-medium">3 hrs</span>
+                </span>
+
+                <img
+                  src="https://imgcdn.floweraura.com/ssr-build/static/media/contains-icon.0d5aaeea.svg"
+                  class="w-4 h-4"
+                  alt="icon"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- PRODUCT CARD 2 -->
+          <div
+            class="w-full border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition bg-white"
+          >
+            <!-- IMAGE -->
+            <div class="relative overflow-hidden h-36 sm:h-44 md:h-52 lg:h-64">
+              <!-- SLIDER -->
+              <div class="slider flex transition-transform duration-500">
+                <img
+                  src="https://imgcdn.floweraura.com/0E4A9431_0.jpg"
+                  class="w-full h-full object-cover flex-shrink-0"
+                />
+
+                <img
+                  src="https://imgcdn.floweraura.com/0E4A9430_0.jpg"
+                  class="w-full h-full object-cover flex-shrink-0"
+                />
+
+                <img
+                  src="https://imgcdn.floweraura.com/0E4A9432_0.jpg"
+                  class="w-full h-full object-cover flex-shrink-0"
+                />
+              </div>
+
+              <!-- HEART -->
+              <div
+                class="absolute top-1 right-1 bg-black/40 p-1.5 rounded-full"
+              >
+                <img
+                  src="https://imgcdn.floweraura.com/ssr-build/static/media/heartWhite.24820693.svg"
+                  class="w-4 h-4"
+                  alt="wishlist"
+                />
+              </div>
+            </div>
+
+            <!-- CONTENT -->
+            <div class="p-2 md:p-3">
+              <!-- TITLE -->
+              <h3
+                class="font-medium text-xs sm:text-sm text-gray-800 line-clamp-1"
+              >
+                Lily Luxe Elegance
+              </h3>
+
+              <!-- PRICE -->
+              <div class="flex gap-1 items-center mt-1">
+                <span class="font-semibold text-sm md:text-base text-gray-800"
+                  >₹1895</span
+                >
+                <span class="line-through text-gray-400 text-xs md:text-sm"
+                  >₹2045</span
+                >
+                <span class="text-orange-500 font-medium text-xs">8% OFF</span>
+              </div>
+
+              <!-- RATING -->
+              <div class="flex items-center gap-1 mt-1">
+                <span
+                  class="text-white bg-green-600 px-1.5 py-[1px] rounded text-[10px] flex items-center gap-1"
+                >
+                  ★ 4.9
+                </span>
+                <span class="text-gray-600 text-[10px] md:text-xs">(1645)</span>
+              </div>
+
+              <!-- DELIVERY -->
+              <div class="flex items-center justify-between mt-1">
+                <span
+                  class="text-gray-700 text-[10px] md:text-xs leading-tight"
+                >
+                  Delivery: <span class="font-medium">3 hrs</span>
+                </span>
+
+                <img
+                  src="https://imgcdn.floweraura.com/ssr-build/static/media/contains-icon.0d5aaeea.svg"
+                  class="w-4 h-4"
+                  alt="icon"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- PRODUCT CARD 3-->
+          <div class="w-full border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition bg-white">
+
+  <!-- IMAGE -->
+  <div class="relative overflow-hidden h-36 sm:h-44 md:h-52 lg:h-64">
+
+    <!-- BADGE -->
+    <span class="absolute top-0 left-0 bg-[#197889] text-white text-[10px] sm:text-xs md:text-sm font-semibold px-2 sm:px-3 py-1 sm:py-1.5 rounded-tl-xl rounded-br-xl z-10">
+      Best Seller
+    </span>
+
+    <!-- SLIDER -->
+    <div class="slider flex transition-transform duration-500 h-full">
+      <img
+        src="https://imgcdn.floweraura.com/enchanted-lily-embrace-9725820fl-A_0.jpg"
+        class="w-full h-full object-cover flex-shrink-0"
+      />
+      <img
+        src="https://imgcdn.floweraura.com/enchanted-lily-embrace-9725820fl-B_0.jpg"
+        class="w-full h-full object-cover flex-shrink-0"
+      />
+      <img
+        src="https://imgcdn.floweraura.com/enchanted-lily-embrace-9725820fl-C_0.jpg"
+        class="w-full h-full object-cover flex-shrink-0"
+      />
+    </div>
+
+    <!-- HEART -->
+    <div class="absolute top-1 right-1 bg-black/40 p-1.5 rounded-full">
+      <img
+        src="https://imgcdn.floweraura.com/ssr-build/static/media/heartWhite.24820693.svg"
+        class="w-4 h-4"
+        alt="wishlist"
+      />
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="p-2 md:p-3">
+
+    <!-- TITLE -->
+    <h3 class="font-medium text-xs sm:text-sm text-gray-800 line-clamp-1">
+      Lily Luxe Elegance
+    </h3>
+
+    <!-- PRICE -->
+    <div class="flex gap-1 items-center mt-1">
+      <span class="font-semibold text-sm md:text-base text-gray-800">₹1895</span>
+      <span class="line-through text-gray-400 text-xs md:text-sm">₹2045</span>
+      <span class="text-orange-500 font-medium text-xs">8% OFF</span>
+    </div>
+
+    <!-- RATING -->
+    <div class="flex items-center gap-1 mt-1">
+      <span class="text-white bg-green-600 px-1.5 py-[1px] rounded text-[10px] flex items-center gap-1">
+        ★ 4.9
+      </span>
+      <span class="text-gray-600 text-[10px] md:text-xs">(1645)</span>
+    </div>
+
+    <!-- DELIVERY -->
+    <div class="flex items-center justify-between mt-1">
+      <span class="text-gray-700 text-[10px] md:text-xs leading-tight">
+        Delivery: <span class="font-medium">3 hrs</span>
+      </span>
+
+      <img
+        src="https://imgcdn.floweraura.com/ssr-build/static/media/contains-icon.0d5aaeea.svg"
+        class="w-4 h-4"
+        alt="icon"
+      />
+    </div>
+
+  </div>
+</div>
+          <!-- PRODUCT CARD 4-->
+          <div class="w-full border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition bg-white">
+
+  <!-- IMAGE -->
+  <div class="relative overflow-hidden h-36 sm:h-44 md:h-52 lg:h-64">
+
+    <!-- BADGE -->
+    <span class="absolute top-0 left-0 bg-[#197889] text-white text-[10px] sm:text-xs md:text-sm font-semibold px-2 sm:px-3 py-1 sm:py-1.5 rounded-tl-xl rounded-br-xl z-10">
+      Premium
+    </span>
+
+    <!-- SLIDER -->
+    <div class="slider flex transition-transform duration-500 h-full">
+      <img
+        src="https://imgcdn.floweraura.com/a-symphony-of-affection-in-blooms-9745410fl-A.jpg"
+        class="w-full h-full object-cover flex-shrink-0"
+      />
+      <img
+        src="https://imgcdn.floweraura.com/a-symphony-of-affection-in-blooms-9745410fl-B.jpg"
+        class="w-full h-full object-cover flex-shrink-0"
+      />
+      <img
+        src="https://imgcdn.floweraura.com/a-symphony-of-affection-in-blooms-9745410fl-B.jpg"
+        class="w-full h-full object-cover flex-shrink-0"
+      />
+    </div>
+
+    <!-- HEART -->
+    <div class="absolute top-1 right-1 bg-black/40 p-1.5 rounded-full">
+      <img
+        src="https://imgcdn.floweraura.com/ssr-build/static/media/heartWhite.24820693.svg"
+        class="w-4 h-4"
+        alt="wishlist"
+      />
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="p-2 md:p-3">
+
+    <!-- TITLE -->
+    <h3 class="font-medium text-xs sm:text-sm text-gray-800 line-clamp-1">
+      Lily Luxe Elegance
+    </h3>
+
+    <!-- PRICE -->
+    <div class="flex gap-1 items-center mt-1">
+      <span class="font-semibold text-sm md:text-base text-gray-800">₹1895</span>
+      <span class="line-through text-gray-400 text-xs md:text-sm">₹2045</span>
+      <span class="text-orange-500 font-medium text-xs">8% OFF</span>
+    </div>
+
+    <!-- RATING -->
+    <div class="flex items-center gap-1 mt-1">
+      <span class="text-white bg-green-600 px-1.5 py-[1px] rounded text-[10px] flex items-center gap-1">
+        ★ 4.9
+      </span>
+      <span class="text-gray-600 text-[10px] md:text-xs">(1645)</span>
+    </div>
+
+    <!-- DELIVERY -->
+    <div class="flex items-center justify-between mt-1">
+      <span class="text-gray-700 text-[10px] md:text-xs leading-tight">
+        Delivery: <span class="font-medium">3 hrs</span>
+      </span>
+
+      <img
+        src="https://imgcdn.floweraura.com/ssr-build/static/media/contains-icon.0d5aaeea.svg"
+        class="w-4 h-4"
+        alt="icon"
+      />
+    </div>
+
+  </div>
+</div>
+
+          <!-- PRODUCT CARD 5-->
+          <div class="w-full border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition bg-white">
+
+  <!-- IMAGE -->
+  <div class="relative overflow-hidden h-36 sm:h-44 md:h-52 lg:h-64">
+
+    <!-- BADGE -->
+    <span class="absolute top-0 left-0 bg-[#197889] text-white text-[10px] sm:text-xs md:text-sm font-semibold px-2 sm:px-3 py-1 sm:py-1.5 rounded-tl-xl rounded-br-xl z-10">
+      Best Seller
+    </span>
+
+    <!-- SLIDER -->
+    <div class="slider flex transition-transform duration-500 h-full">
+      <img
+        src="https://imgcdn.floweraura.com/pink-lily-splendour-9725800fl-A_0.jpg"
+        class="w-full h-full object-cover flex-shrink-0"
+      />
+      <img
+        src="https://imgcdn.floweraura.com/pink-lily-splendour-9725800fl-B_0.jpg"
+        class="w-full h-full object-cover flex-shrink-0"
+      />
+      <img
+        src="https://imgcdn.floweraura.com/pink-lily-splendour-9725800fl-C_0.jpg"
+        class="w-full h-full object-cover flex-shrink-0"
+      />
+    </div>
+
+    <!-- HEART -->
+    <div class="absolute top-1 right-1 bg-black/40 p-1.5 rounded-full">
+      <img
+        src="https://imgcdn.floweraura.com/ssr-build/static/media/heartWhite.24820693.svg"
+        class="w-4 h-4"
+        alt="wishlist"
+      />
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="p-2 md:p-3">
+
+    <!-- TITLE -->
+    <h3 class="font-medium text-xs sm:text-sm text-gray-800 line-clamp-1">
+      Lily Luxe Elegance
+    </h3>
+
+    <!-- PRICE -->
+    <div class="flex gap-1 items-center mt-1">
+      <span class="font-semibold text-sm md:text-base text-gray-800">₹1895</span>
+      <span class="line-through text-gray-400 text-xs md:text-sm">₹2045</span>
+      <span class="text-orange-500 font-medium text-xs">8% OFF</span>
+    </div>
+
+    <!-- RATING -->
+    <div class="flex items-center gap-1 mt-1">
+      <span class="text-white bg-green-600 px-1.5 py-[1px] rounded text-[10px] flex items-center gap-1">
+        ★ 4.9
+      </span>
+      <span class="text-gray-600 text-[10px] md:text-xs">(1645)</span>
+    </div>
+
+    <!-- DELIVERY -->
+    <div class="flex items-center justify-between mt-1">
+      <span class="text-gray-700 text-[10px] md:text-xs leading-tight">
+        Delivery: <span class="font-medium">3 hrs</span>
+      </span>
+
+      <img
+        src="https://imgcdn.floweraura.com/ssr-build/static/media/contains-icon.0d5aaeea.svg"
+        class="w-4 h-4"
+        alt="icon"
+      />
+    </div>
+
+  </div>
+</div>
+          <!-- PRODUCT CARD 6-->
+         <div class="w-full border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition bg-white">
+
+  <!-- IMAGE -->
+  <div class="relative overflow-hidden h-36 sm:h-44 md:h-52 lg:h-64">
+
+    <!-- BADGE -->
+    <span class="absolute top-0 left-0 bg-[#197889] text-white text-[10px] sm:text-xs md:text-sm font-semibold px-2 sm:px-3 py-1 sm:py-1.5 rounded-tl-xl rounded-br-xl z-10">
+      Best Seller
+    </span>
+
+    <!-- SLIDER -->
+    <div class="slider flex transition-transform duration-500 h-full">
+      <img
+        src="https://imgcdn.floweraura.com/serene-poetry-of-white-lilies-9725870fl-A_0.jpg"
+        class="w-full h-full object-cover flex-shrink-0"
+      />
+      <img
+        src="https://imgcdn.floweraura.com/serene-poetry-of-white-lilies-9725870fl-B_0.jpg"
+        class="w-full h-full object-cover flex-shrink-0"
+      />
+      <img
+        src="https://imgcdn.floweraura.com/serene-poetry-of-white-lilies-9725870fl-C_0.jpg"
+        class="w-full h-full object-cover flex-shrink-0"
+      />
+    </div>
+
+    <!-- HEART -->
+    <div class="absolute top-1 right-1 bg-black/40 p-1.5 rounded-full">
+      <img
+        src="https://imgcdn.floweraura.com/ssr-build/static/media/heartWhite.24820693.svg"
+        class="w-4 h-4"
+        alt="wishlist"
+      />
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="p-2 md:p-3">
+
+    <!-- TITLE -->
+    <h3 class="font-medium text-xs sm:text-sm text-gray-800 line-clamp-1">
+      Lily Luxe Elegance
+    </h3>
+
+    <!-- PRICE -->
+    <div class="flex gap-1 items-center mt-1">
+      <span class="font-semibold text-sm md:text-base text-gray-800">₹1895</span>
+      <span class="line-through text-gray-400 text-xs md:text-sm">₹2045</span>
+      <span class="text-orange-500 font-medium text-xs">8% OFF</span>
+    </div>
+
+    <!-- RATING -->
+    <div class="flex items-center gap-1 mt-1">
+      <span class="text-white bg-green-600 px-1.5 py-[1px] rounded text-[10px] flex items-center gap-1">
+        ★ 4.9
+      </span>
+      <span class="text-gray-600 text-[10px] md:text-xs">(1645)</span>
+    </div>
+
+    <!-- DELIVERY -->
+    <div class="flex items-center justify-between mt-1">
+      <span class="text-gray-700 text-[10px] md:text-xs leading-tight">
+        Delivery: <span class="font-medium">3 hrs</span>
+      </span>
+
+      <img
+        src="https://imgcdn.floweraura.com/ssr-build/static/media/contains-icon.0d5aaeea.svg"
+        class="w-4 h-4"
+        alt="icon"
+      />
+    </div>
+
+  </div>
+</div>
+          <!-- PRODUCT CARD 7-->
+          <div class="w-full border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition bg-white">
+
+  <!-- IMAGE -->
+  <div class="relative overflow-hidden h-36 sm:h-44 md:h-52 lg:h-64">
+
+    <!-- BADGE -->
+    <span class="absolute top-0 left-0 bg-[#197889] text-white text-[10px] sm:text-xs md:text-sm font-semibold px-2 sm:px-3 py-1 sm:py-1.5 rounded-tl-xl rounded-br-xl z-10">
+      Best Seller
+    </span>
+
+    <!-- SLIDER -->
+    <div class="slider flex transition-transform duration-500 h-full">
+      <img
+        src="https://imgcdn.floweraura.com/pink-lily-splendour-9725800fl-A_0.jpg"
+        class="w-full h-full object-cover flex-shrink-0"
+      />
+      <img
+        src="https://imgcdn.floweraura.com/pink-lily-splendour-9725800fl-B_0.jpg"
+        class="w-full h-full object-cover flex-shrink-0"
+      />
+      <img
+        src="https://imgcdn.floweraura.com/pink-lily-splendour-9725800fl-C_0.jpg"
+        class="w-full h-full object-cover flex-shrink-0"
+      />
+    </div>
+
+    <!-- HEART -->
+    <div class="absolute top-1 right-1 bg-black/40 p-1.5 rounded-full">
+      <img
+        src="https://imgcdn.floweraura.com/ssr-build/static/media/heartWhite.24820693.svg"
+        class="w-4 h-4"
+        alt="wishlist"
+      />
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="p-2 md:p-3">
+
+    <!-- TITLE -->
+    <h3 class="font-medium text-xs sm:text-sm text-gray-800 line-clamp-1">
+      Lily Luxe Elegance
+    </h3>
+
+    <!-- PRICE -->
+    <div class="flex gap-1 items-center mt-1">
+      <span class="font-semibold text-sm md:text-base text-gray-800">₹1895</span>
+      <span class="line-through text-gray-400 text-xs md:text-sm">₹2045</span>
+      <span class="text-orange-500 font-medium text-xs">8% OFF</span>
+    </div>
+
+    <!-- RATING -->
+    <div class="flex items-center gap-1 mt-1">
+      <span class="text-white bg-green-600 px-1.5 py-[1px] rounded text-[10px] flex items-center gap-1">
+        ★ 4.9
+      </span>
+      <span class="text-gray-600 text-[10px] md:text-xs">(1645)</span>
+    </div>
+
+    <!-- DELIVERY -->
+    <div class="flex items-center justify-between mt-1">
+      <span class="text-gray-700 text-[10px] md:text-xs leading-tight">
+        Delivery: <span class="font-medium">3 hrs</span>
+      </span>
+
+      <img
+        src="https://imgcdn.floweraura.com/ssr-build/static/media/contains-icon.0d5aaeea.svg"
+        class="w-4 h-4"
+        alt="icon"
+      />
+    </div>
+
+  </div>
+</div>
+
+        </div>
+      </div>
+    </section>
+
+<section class="py-6 md:py-10">
+  <div class="max-w-7xl mx-auto px-4 relative">
+
+    <!-- HEADING -->
+    <h2 class="text-lg md:text-2xl font-semibold text-gray-800 mb-3">
+      Review & Ratings for lilies
+    </h2>
+
+    <!-- MOBILE TOP BAR -->
+    <div class="flex items-center justify-between mb-3 md:hidden">
+      
+      <!-- LEFT: VIEW ALL -->
+      <a href="#" class="text-[#197889] text-sm font-medium">
+        View All
+      </a>
+
+      <!-- RIGHT: RATING -->
+      <div class="flex items-center gap-2 text-sm">
+        <span class="text-green-700 font-semibold">★ 4.9</span>
+        <span class="text-gray-500">398 reviews</span>
+      </div>
+    </div>
+
+    <!-- DESKTOP TOP BAR -->
+    <div class="hidden md:flex md:justify-between md:items-center gap-3 mb-6">
+      
+      <a href="#" class="text-[#197889] text-lg">
+        (View All Reviews)
+      </a>
+
+      <div class="flex items-center gap-4 bg-white px-4 py-1 rounded border">
+        <span class="font-semibold text-green-700">★ 4.9</span>
+        <span class="text-gray-500 text-sm">398 reviews</span>
+      </div>
+    </div>
+
+    <!-- SUB RATING -->
+    <div class="flex flex-wrap items-center gap-4 mb-6 text-sm text-gray-600">
+      
+      <div class="flex items-center gap-2">
+        <img
+          src="https://imgcdn.floweraura.com/ssr-build/static/media/stars.16306d8d.png"
+          class="h-8 md:h-10"
+        />
+        <span class="text-sm md:text-lg font-semibold">4.9 out of 5</span>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <img
+          src="https://imgcdn.floweraura.com/ssr-build/static/media/recomended.93ca505e.png"
+          class="h-8 md:h-10"
+        />
+        <span class="text-sm md:text-lg font-semibold">98% Recommended</span>
+      </div>
+    </div>
+
+    <!-- ARROWS (HIDE ON MOBILE) -->
+    <button
+      onclick="scrollLeftReview()"
+      class="hidden md:block absolute left-0 top-[60%] -translate-y-1/2 bg-white shadow p-3 rounded-full z-10"
+    >
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+
+    <button
+      onclick="scrollRightReview()"
+      class="hidden md:block absolute right-0 top-[60%] -translate-y-1/2 bg-white shadow p-3 rounded-full z-10"
+    >
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+
+    <!-- SLIDER -->
+    <div id="reviewSlider" class="flex gap-4 md:gap-6 overflow-x-auto md:overflow-hidden">
+
+      <!-- CARD -->
+      <div class="min-w-[260px] md:min-w-[320px] bg-white border rounded-2xl shadow-sm p-4 md:p-5 flex flex-col gap-3 md:gap-4">
+        <div class="flex gap-3">
+          <img
+            src="https://imgcdn.floweraura.com/fa/review_image/1723285534_662192.jpeg"
+            class="w-10 h-10 md:w-12 md:h-12 rounded object-cover"
+          />
+          <p class="text-gray-600 text-xs md:text-sm">
+            Beautiful flowers and well decorated. Really happy with the service.
+          </p>
+        </div>
+
+        <div class="flex gap-3 items-center">
+          <h4 class="font-semibold text-gray-800 text-sm md:text-base">Ofilia</h4>
+          <span class="bg-green-600 text-white text-[10px] md:text-xs px-2 py-1 rounded">
+            ★ 5
+          </span>
+        </div>
+
+        <div class="text-[10px] md:text-xs text-gray-500 space-y-1">
+          <p><strong>Posted On:</strong> 10 Aug 2024</p>
+          <p><strong>City:</strong> Ernakulam</p>
+          <p><strong>Occasion:</strong> Birthday</p>
+        </div>
+      </div>
+
+      <div class="min-w-[260px] md:min-w-[320px] bg-white border rounded-2xl shadow-sm p-4 md:p-5 flex flex-col gap-3 md:gap-4">
+        <div class="flex gap-3">
+          <img
+            src="https://imgcdn.floweraura.com/fa/review_image/1723285534_662192.jpeg"
+            class="w-10 h-10 md:w-12 md:h-12 rounded object-cover"
+          />
+          <p class="text-gray-600 text-xs md:text-sm">
+            Beautiful flowers and well decorated. Really happy with the service.
+          </p>
+        </div>
+
+        <div class="flex gap-3 items-center">
+          <h4 class="font-semibold text-gray-800 text-sm md:text-base">Ofilia</h4>
+          <span class="bg-green-600 text-white text-[10px] md:text-xs px-2 py-1 rounded">
+            ★ 5
+          </span>
+        </div>
+
+        <div class="text-[10px] md:text-xs text-gray-500 space-y-1">
+          <p><strong>Posted On:</strong> 10 Aug 2024</p>
+          <p><strong>City:</strong> Ernakulam</p>
+          <p><strong>Occasion:</strong> Birthday</p>
+        </div>
+      </div>
+
+
+      <div class="min-w-[260px] md:min-w-[320px] bg-white border rounded-2xl shadow-sm p-4 md:p-5 flex flex-col gap-3 md:gap-4">
+        <div class="flex gap-3">
+          <img
+            src="https://imgcdn.floweraura.com/fa/review_image/1723285534_662192.jpeg"
+            class="w-10 h-10 md:w-12 md:h-12 rounded object-cover"
+          />
+          <p class="text-gray-600 text-xs md:text-sm">
+            Beautiful flowers and well decorated. Really happy with the service.
+          </p>
+        </div>
+
+        <div class="flex gap-3 items-center">
+          <h4 class="font-semibold text-gray-800 text-sm md:text-base">Ofilia</h4>
+          <span class="bg-green-600 text-white text-[10px] md:text-xs px-2 py-1 rounded">
+            ★ 5
+          </span>
+        </div>
+
+        <div class="text-[10px] md:text-xs text-gray-500 space-y-1">
+          <p><strong>Posted On:</strong> 10 Aug 2024</p>
+          <p><strong>City:</strong> Ernakulam</p>
+          <p><strong>Occasion:</strong> Birthday</p>
+        </div>
+      </div>
+
+
+      <div class="min-w-[260px] md:min-w-[320px] bg-white border rounded-2xl shadow-sm p-4 md:p-5 flex flex-col gap-3 md:gap-4">
+        <div class="flex gap-3">
+          <img
+            src="https://imgcdn.floweraura.com/fa/review_image/1723285534_662192.jpeg"
+            class="w-10 h-10 md:w-12 md:h-12 rounded object-cover"
+          />
+          <p class="text-gray-600 text-xs md:text-sm">
+            Beautiful flowers and well decorated. Really happy with the service.
+          </p>
+        </div>
+
+        <div class="flex gap-3 items-center">
+          <h4 class="font-semibold text-gray-800 text-sm md:text-base">Ofilia</h4>
+          <span class="bg-green-600 text-white text-[10px] md:text-xs px-2 py-1 rounded">
+            ★ 5
+          </span>
+        </div>
+
+        <div class="text-[10px] md:text-xs text-gray-500 space-y-1">
+          <p><strong>Posted On:</strong> 10 Aug 2024</p>
+          <p><strong>City:</strong> Ernakulam</p>
+          <p><strong>Occasion:</strong> Birthday</p>
+        </div>
+      </div>
+
+
+      <div class="min-w-[260px] md:min-w-[320px] bg-white border rounded-2xl shadow-sm p-4 md:p-5 flex flex-col gap-3 md:gap-4">
+        <div class="flex gap-3">
+          <img
+            src="https://imgcdn.floweraura.com/fa/review_image/1723285534_662192.jpeg"
+            class="w-10 h-10 md:w-12 md:h-12 rounded object-cover"
+          />
+          <p class="text-gray-600 text-xs md:text-sm">
+            Beautiful flowers and well decorated. Really happy with the service.
+          </p>
+        </div>
+
+        <div class="flex gap-3 items-center">
+          <h4 class="font-semibold text-gray-800 text-sm md:text-base">Ofilia</h4>
+          <span class="bg-green-600 text-white text-[10px] md:text-xs px-2 py-1 rounded">
+            ★ 5
+          </span>
+        </div>
+
+        <div class="text-[10px] md:text-xs text-gray-500 space-y-1">
+          <p><strong>Posted On:</strong> 10 Aug 2024</p>
+          <p><strong>City:</strong> Ernakulam</p>
+          <p><strong>Occasion:</strong> Birthday</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    <section class="py-8 md:py-10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-4">
+        <!-- Content -->
+        <div
+          class="text-gray-700 space-y-4 md:space-y-6 leading-relaxed text-[14px] sm:text-[15px] md:text-sm"
+        >
+          <!-- Heading -->
+          <h1
+            class="text-xl sm:text-2xl md:text-2xl font-semibold text-gray-900 leading-snug"
+          >
+            FlowerAura: Send Flowers, Cakes, Gifts & Plants Online Across India
+          </h1>
+
+          <!-- Paragraph -->
+          <p class="leading-6 sm:leading-7 line-clamp-3 md:line-clamp-none">
+            At FlowerAura, we take pride in delivering the highest quality
+            flowers, cakes, plants, and gifts to your loved ones. Our diverse
+            range ensures there's something perfect for every occasion. From
+            romantic roses to delightful chocolate cakes and vibrant indoor
+            plants, we have it all. As India's most trusted gifting brand, we
+            guarantee fresh and beautiful flowers, delicious cakes, vibrant
+            plants, and unique gifts that bring joy and smiles. Enjoy the
+            convenience of doorstep delivery with our safe and secure packaging,
+            ensuring your order arrives in pristine condition.
+            <br />
+            Let’s explore our collection a little better:
+          </p>
+        </div>
+
+        <!-- Button -->
+        <div class="mt-5 md:mt-6 text-center">
+          <button
+            class="text-[#197889] text-sm sm:text-base font-medium border-b border-[#197889]"
+          >
+            Read More
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-10 hidden md:block"
+      <div class="max-w-7xl mx-auto px-4">
+        <!-- Heading -->
+        <h2 class="text-2xl font-semibold text-gray-800 mb-6">
+          Related Blog Reads
+        </h2>
+
+        <!-- GRID -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Blog 1 -->
+          <div>
+            <h3 class="text-lg font-semibold text-gray-800 mb-2">
+              The Ultimate Flower Guide for Mumbai: Popular Markets, Favourite
+              Blooms & Gifting Tips
+            </h3>
+
+            <p class="text-gray-600 text-sm mb-3 line-clamp-3">
+              Mumbai moves fast. People are always on the go, plans change
+              quickly, and celebrations often happen in the middle of a packed
+              schedule. Yet, one thing never feels rushed here: the joy of
+              giving
+            </p>
+
+            <a
+              href="#"
+              class="text-[#197889] text-sm font-medium hover:underline"
+            >
+              Read More...
+            </a>
+          </div>
+
+          <!-- Blog 2 -->
+          <div>
+            <h3 class="text-lg font-semibold text-gray-800 mb-2">
+              The Hidden Power of Colors: How Flower Color Influences Their
+              Symbolic Meaning
+            </h3>
+
+            <p class="text-gray-600 text-sm mb-3 line-clamp-3">
+              Flowers have always been a symbol of beauty, nature, and love, but
+              did you know that the meaning behind different flower colors is
+              just as important? Each hue carries its own emotions, messages,
+              and
+            </p>
+
+            <a
+              href="#"
+              class="text-[#197889] text-sm font-medium hover:underline"
+            >
+              Read More...
+            </a>
+          </div>
+
+          <!-- Blog 3 -->
+          <div>
+            <h3 class="text-lg font-semibold text-gray-800 mb-2">
+              Why Marigolds are the Heart of Indian Festivals - Tradition,
+              Symbolism & Science
+            </h3>
+
+            <p class="text-gray-600 text-sm mb-3 line-clamp-3">
+              The first thing you notice during Diwali is the glow. Diyas
+              flicker. Rangoli colours burst across the floor. And everywhere
+              you look, strings of bright orange and yellow marigolds frame
+              doors,
+            </p>
+
+            <a
+              href="#"
+              class="text-[#197889] text-sm font-medium hover:underline"
+            >
+              Read More...
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+     <!-- for mobile size -->
+    <section class="py-8 md:hidden">
+  <div class="max-w-7xl mx-auto px-4">
+
+    <!-- HEADING -->
+    <h2 class="text-lg font-semibold mb-4">
+      Related Blog Reads
+    </h2>
+
+    <!-- MOBILE SLIDER -->
+    <div class="flex gap-4 overflow-x-auto scroll-smooth pb-2">
+
+      <!-- CARD 1 -->
+      <div class="min-w-[260px]">
+        <h3 class="text-sm font-semibold text-green-800 mb-2">
+          The Ultimate Flower Guide for Mumbai
+        </h3>
+        <p class="text-gray-600 text-xs line-clamp-3 mb-2">
+          Mumbai moves fast. People are always on the go, plans change quickly, and celebrations often happen in the middle of a packed schedule. Yet, one thing never feels rushed here: the joy of giving
+        </p>
+        <a href="#" class="text-[#197889] text-xs font-medium">
+          Read More...
+        </a>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="min-w-[260px]">
+        <h3 class="text-sm font-semibold text-gray-800 mb-2">
+          The Hidden Power of Colors
+        </h3>
+        <p class="text-gray-600 text-xs line-clamp-3 mb-2">
+         Flowers have always been a symbol of beauty, nature, and love, but did you know that the meaning behind different flower colors is just as important? Each hue carries its own emotions, messages, and
+        </p>
+        <a href="#" class="text-[#197889] text-xs font-medium">
+          Read More...
+        </a>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="min-w-[260px]">
+        <h3 class="text-sm font-semibold text-gray-800 mb-2">
+          Why Marigolds are the Heart of Indian Festivals
+        </h3>
+        <p class="text-gray-600 text-xs line-clamp-3 mb-2">
+          The first thing you notice during Diwali is the glow. Diyas flicker. Rangoli colours burst across the floor. And everywhere you look, strings of bright orange and yellow marigolds frame doors,
+        </p>
+        <a href="#" class="text-[#197889] text-xs font-medium">
+          Read More...
+        </a>
+      </div>
+
+    </div>
+  </div>
+  </section>
+
+    <section class="py-10">
+      <div class="max-w-7xl mx-auto px-4">
+        <!-- Heading -->
+        <h2 class="text-2xl font-semibold text-gray-800 mb-6">Quick Links</h2>
+
+        <!-- GRID -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6 bg-white px-5 py-10 rounded-2xl"
+        >
+          <!-- Item -->
+          <div>
+            <h3 class="font-semibold text-gray-800 mb-2">Flowers By Type</h3>
+            <p class="text-sm text-gray-600 leading-6">
+              <a href="#" class="hover:text-pink-600">Flowers Bouquet</a> |
+              <a href="#" class="hover:text-pink-600">Flowers Basket</a> |
+              <a href="#" class="hover:text-pink-600">Roses</a> |
+              <a href="#" class="hover:text-pink-600">Carnations</a> |
+              <a href="#" class="hover:text-pink-600">Gerberas</a> |
+              <a href="#" class="hover:text-pink-600">Orchids</a>
+            </p>
+          </div>
+
+          <!-- Item -->
+          <div>
+            <h3 class="font-semibold text-gray-800 mb-2">Flowers By Colors</h3>
+            <p class="text-sm text-gray-600 leading-6">
+              <a href="#" class="hover:text-pink-600">Pink Flowers</a> |
+              <a href="#" class="hover:text-pink-600">Red Flowers</a> |
+              <a href="#" class="hover:text-pink-600">White Flowers</a> |
+              <a href="#" class="hover:text-pink-600">Yellow Flowers</a> |
+              <a href="#" class="hover:text-pink-600">Mixed Flowers</a>
+            </p>
+          </div>
+
+          <!-- Item -->
+          <div>
+            <h3 class="font-semibold text-gray-800 mb-2">Flowers Combos</h3>
+            <p class="text-sm text-gray-600 leading-6">
+              <a href="#" class="hover:text-pink-600">Flowers & Cake</a> |
+              <a href="#" class="hover:text-pink-600">Flowers & Chocolates</a> |
+              <a href="#" class="hover:text-pink-600">Flowers & Teddy</a> |
+              <a href="#" class="hover:text-pink-600">All Flowers Combos</a>
+            </p>
+          </div>
+
+          <!-- Item -->
+          <div>
+            <h3 class="font-semibold text-gray-800 mb-2">
+              Flowers By Occasion
+            </h3>
+            <p class="text-sm text-gray-600 leading-6">
+              <a href="#" class="hover:text-pink-600">Anniversary Flowers</a> |
+              <a href="#" class="hover:text-pink-600">Birthday Flowers</a> |
+              <a href="#" class="hover:text-pink-600">Womens Day Flowers</a> |
+              <a href="#" class="hover:text-pink-600">Mothers Day Flowers</a> |
+              <a href="#" class="hover:text-pink-600">Fathers Day Flowers</a>
+            </p>
+          </div>
+
+          <!-- Item -->
+          <div>
+            <h3 class="font-semibold text-gray-800 mb-2">Flowers Top Cities</h3>
+            <p class="text-sm text-gray-600 leading-6">
+              <a href="#" class="hover:text-pink-600">Delhi</a> |
+              <a href="#" class="hover:text-pink-600">Gurgaon</a> |
+              <a href="#" class="hover:text-pink-600">Bangalore</a> |
+              <a href="#" class="hover:text-pink-600">Mumbai</a> |
+              <a href="#" class="hover:text-pink-600">Pune</a> |
+              <a href="#" class="hover:text-pink-600">Chennai</a> |
+              <a href="#" class="hover:text-pink-600">Kolkata</a> |
+              <a href="#" class="hover:text-pink-600">Hyderabad</a>
+            </p>
+          </div>
+
+          <!-- Item -->
+          <div>
+            <h3 class="font-semibold text-gray-800 mb-2">
+              International Flowers Delivery
+            </h3>
+            <p class="text-sm text-gray-600 leading-6">
+              <a href="#" class="hover:text-pink-600">USA</a> |
+              <a href="#" class="hover:text-pink-600">UK</a> |
+              <a href="#" class="hover:text-pink-600">Australia</a> |
+              <a href="#" class="hover:text-pink-600">Canada</a> |
+              <a href="#" class="hover:text-pink-600">Germany</a> |
+              <a href="#" class="hover:text-pink-600">UAE</a> |
+              <a href="#" class="hover:text-pink-600">Italy</a> |
+              <a href="#" class="hover:text-pink-600">Spain</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-white text-gray-700 text-sm py-10 hidden md:block">
+      <div class="max-w-7xl mx-auto px-4 bg-gray-100 py-20 rounded-3xl">
+        <!-- TOP SECTION -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-5">
+          <!-- LINKS SECTION -->
+          <div class="md:col-span-9 grid grid-cols-2 md:grid-cols-3 gap-6">
+            <!-- COLUMN 1 -->
+            <ul class="space-y-2 pl-8 text-base font-semibold">
+              <li><a href="#" class="hover:text-pink-600">About Us</a></li>
+              <li><a href="#" class="hover:text-pink-600">Sell With Us</a></li>
+              <li>
+                <a href="#" class="hover:text-pink-600">Coupons & Deals</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-pink-600"
+                  >Cancellation & Refund</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-pink-600">Terms and Conditions</a>
+              </li>
+              <li><a href="#" class="hover:text-pink-600">Retail Stores</a></li>
+              <li><a href="#" class="hover:text-pink-600">Career</a></li>
+            </ul>
+
+            <!-- COLUMN 2 -->
+            <ul class="space-y-2 text-base font-semibold">
+              <li><a href="#" class="hover:text-pink-600">Media</a></li>
+              <li>
+                <a href="#" class="hover:text-pink-600">Privacy Policy</a>
+              </li>
+              <li><a href="#" class="hover:text-pink-600">Reviews</a></li>
+              <li><a href="#" class="hover:text-pink-600">Blog</a></li>
+              <li><a href="#" class="hover:text-pink-600">Sitemap</a></li>
+              <li><a href="#" class="hover:text-pink-600">Quotes</a></li>
+            </ul>
+
+            <!-- COLUMN 3 -->
+            <ul class="space-y-2 text-base font-semibold">
+              <li>
+                <a href="#" class="hover:text-pink-600">Corporate Gifts</a>
+              </li>
+              <li><a href="#" class="hover:text-pink-600">Franchise</a></li>
+              <li><a href="#" class="hover:text-pink-600">FAQ</a></li>
+              <li><a href="#" class="hover:text-pink-600">Contact Us</a></li>
+              <li><a href="#" class="hover:text-pink-600">Download App</a></li>
+            </ul>
+          </div>
+
+          <!-- RIGHT SECTION -->
+          <div class="md:col-span-3 space-y-5 pr-2 text-base font-semibold">
+            <p class="font-medium">
+              Simplify your gifting experience with our app.
+            </p>
+
+            <!-- QR + APP -->
+            <div class="flex gap-3 items-center">
+              <img
+                src="https://imgcdn.floweraura.com/home-page/app-footer-qr.svg"
+                class="w-24 h-24 object-contain"
+              />
+
+              <div class="flex flex-col gap-2">
+                <img
+                  src="https://imgcdn.floweraura.com/fa-media/play_store.svg"
+                  class="w-32"
+                />
+                <img
+                  src="https://imgcdn.floweraura.com/fa-media/app_store.svg"
+                  class="w-32"
+                />
+              </div>
+            </div>
+
+            <!-- SOCIAL -->
+            <div>
+              <h3 class="font-semibold mb-2">
+                Spread The Love On Social Media
+              </h3>
+
+              <div class="flex flex-wrap gap-3">
+                <div
+                  class="flex justify-center md:justify-start flex-wrap gap-3 mt-3"
+                >
+                  <img
+                    src="https://imgcdn.floweraura.com/fa-media/facebook_logo.svg"
+                    class="w-8 h-8 cursor-pointer"
+                  />
+                  <img
+                    src="https://imgcdn.floweraura.com/home-page/twitter-x.svg"
+                    class="w-8 h-8 cursor-pointer"
+                  />
+                  <img
+                    src="https://imgcdn.floweraura.com/fa-media/youtube_logo.svg"
+                    class="w-8 h-8 cursor-pointer"
+                  />
+                  <img
+                    src="https://imgcdn.floweraura.com/fa-logo/pinterest-logo.svg"
+                    class="w-8 h-8 cursor-pointer"
+                  />
+                  <img
+                    src="https://imgcdn.floweraura.com/fa-media/fa-insta.png"
+                    class="w-8 h-8 cursor-pointer"
+                  />
+                  <img
+                    src="https://imgcdn.floweraura.com/fa-media/linkdin_logo.svg"
+                    class="w-8 h-8 cursor-pointer"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BOTTOM SECTION -->
+      <div
+        class="max-w-7xl mx-auto mt-5 pt-6 flex flex-col md:flex-row justify-between items-center gap-4"
+      >
+        <!-- LOGO -->
+        <div class="flex items-center gap-3">
+          <img
+            src="https://imgcdn.floweraura.com/fa-logo/final-23-mob.svg"
+            class="w-35"
+          />
+          <span>© 2026 FA GIFTS PVT. LTD</span>
+        </div>
+
+        <!-- PAYMENT -->
+        <div class="flex items-center gap-2">
+          <span class="font-medium">We Accept:</span>
+          <img
+            src="https://imgcdn.floweraura.com/banners/desk-payment-26.png"
+            class="h-6"
+          />
+        </div>
+      </div>
+    </footer>
+
+    <!-- For mobaile -->
+    <footer class="bg-gray-50 text-gray-700 text-sm py-8 md:hidden">
+      <div class="max-w-7xl mx-auto px-4">
+        <!-- 1. HEADING -->
+        <p class="text-lg font-semibold text-center mb-4">
+          Let us make you feel special
+        </p>
+
+        <!-- 2. APP BUTTONS -->
+        <div class="flex justify-center gap-3 mb-6 pb-4 border-b">
+          <img
+            src="https://imgcdn.floweraura.com/fa-media/play_store.svg"
+            class="w-32"
+          />
+          <img
+            src="https://imgcdn.floweraura.com/fa-media/app_store.svg"
+            class="w-32"
+          />
+        </div>
+
+        <!-- 3. SOCIAL HEADING -->
+        <h3 class="text-lg font-semibold text-center mb-3">
+          Spread The Love On Social Media
+        </h3>
+
+        <!-- 4. SOCIAL ICONS -->
+        <div class="flex justify-center gap-3 mb-6 pb-4 border-b">
+          <img
+            src="https://imgcdn.floweraura.com/fa-media/facebook_logo.svg"
+            class="w-8 h-8"
+          />
+          <img
+            src="https://imgcdn.floweraura.com/home-page/twitter-x.svg"
+            class="w-8 h-8"
+          />
+          <img
+            src="https://imgcdn.floweraura.com/fa-media/youtube_logo.svg"
+            class="w-8 h-8"
+          />
+          <img
+            src="https://imgcdn.floweraura.com/fa-logo/pinterest-logo.svg"
+            class="w-8 h-8"
+          />
+          <img
+            src="https://imgcdn.floweraura.com/fa-media/fa-insta.png"
+            class="w-8 h-8"
+          />
+          <img
+            src="https://imgcdn.floweraura.com/fa-media/linkdin_logo.svg"
+            class="w-8 h-8"
+          />
+        </div>
+
+        <!-- 5. LIST (2 COLUMN MOBILE ONLY) -->
+        <div
+          class="grid grid-cols-2 gap-6 text-base font-semibold mb-6 justify-items-center pb-4 border-b"
+        >
+          <ul class="space-y-2 text-left">
+            <li>About Us</li>
+            <li>Sell With Us</li>
+            <li>Coupons & Deals</li>
+            <li>Cancellation & Refund</li>
+            <li>Terms and Conditions</li>
+            <li>Retail Stores</li>
+            <li>Career</li>
+            <li>Media</li>
+            <li>Privacy Policy</li>
+            <li>Reviews</li>
+          </ul>
+
+          <ul class="space-y-2 text-left">
+            <li>Blog</li>
+            <li>Sitemap</li>
+            <li>Quotes</li>
+            <li>Corporate Gifts</li>
+            <li>Franchise</li>
+            <li>FAQ</li>
+            <li>Contact Us</li>
+            <li>Download App</li>
+          </ul>
+        </div>
+        <!-- 6. LOGO -->
+        <div class="flex flex-col items-center mb-3">
+          <img
+            src="https://imgcdn.floweraura.com/fa-logo/final-23-mob.svg"
+            class="w-28"
+          />
+        </div>
+
+        <!-- 7. WE ACCEPT -->
+        <p class="text-center text-[15px] font-medium mb-2">We Accept:</p>
+
+        <!-- 8. PAYMENT IMAGE -->
+        <div class="flex justify-center mb-4">
+          <img
+            src="https://imgcdn.floweraura.com/banners/desk-payment-26.png"
+            class="h-6"
+          />
+        </div>
+
+        <!-- 9. COPYRIGHT -->
+        <p class="text-center text-[15px]">© 2026 FA GIFTS PVT. LTD</p>
+      </div>
+    </footer>
+
+    <script>
+      function toggleSort() {
+        const menu = document.getElementById("sortMenu");
+        menu.classList.toggle("hidden");
+      }
+
+      // optional close on outside click
+      document.addEventListener("click", function (e) {
+        const menu = document.getElementById("sortMenu");
+        if (!e.target.closest(".relative")) {
+          menu.classList.add("hidden");
+        }
+      });
+
+      const cards = document.querySelectorAll(".relative");
+
+      cards.forEach((card) => {
+        const slider = card.querySelector(".slider");
+        let index = 0;
+        let interval;
+
+        card.addEventListener("mouseenter", () => {
+          interval = setInterval(() => {
+            index++;
+            if (index > 2) index = 0;
+
+            slider.style.transform = `translateX(-${index * 100}%)`;
+          }, 1500);
+        });
+
+        card.addEventListener("mouseleave", () => {
+          clearInterval(interval);
+          index = 0;
+          slider.style.transform = `translateX(0%)`;
+        });
+      });
+
+      const reviewSlider = document.getElementById("reviewSlider");
+      const cards1 = document.querySelectorAll(".review-card");
+
+      let currentIndex = 0;
+
+      function scrollRightReview() {
+        if (currentIndex < cards.length - 1) {
+          currentIndex++;
+          slideToIndex();
+        }
+      }
+
+      function scrollLeftReview() {
+        if (currentIndex > 0) {
+          currentIndex--;
+          slideToIndex();
+        }
+      }
+
+      function slideToIndex() {
+        const cardWidth = cards1[0].offsetWidth + 24; // gap = 6 (Tailwind gap-6 = 24px)
+        reviewSlider.scrollTo({
+          left: cardWidth * currentIndex,
+          behavior: "smooth",
+        });
+      }
+    </script>
+  </body>
+</html>
